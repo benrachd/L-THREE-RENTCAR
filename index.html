@@ -3,154 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auto Rent — location de voitures premium au Maroc. Livraison gratuite à l'aéroport, tarifs compétitifs, réservation instantanée via WhatsApp.">
-    <title>Auto Rent | Location de Voitures Premium</title>
+    <meta name="description" content="Auto Rent — Location de voitures premium à Meknès et Fès. Réservation instantanée, livraison aéroport, flotte récente.">
+    <title>Auto Rent | Location Premium — Meknès & Fès</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #c9a84c;
-            --gold-light: #e8d5a3;
-            --dark: #08080d;
-            --card: #111118;
-        }
         * { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
 
-        body {
-            background: var(--dark);
-            color: #f0f0f5;
-        }
-
-        .mesh-bg {
-            background-color: #08080d;
-            background-image:
-                radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,168,76,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 40% at 90% 80%, rgba(201,168,76,0.06) 0%, transparent 50%),
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: auto, auto, 60px 60px, 60px 60px;
-        }
-
-        .hero-bg {
-            background-image:
-                linear-gradient(255deg, rgba(8,8,13,0.97) 40%, rgba(8,8,13,0.75) 70%, rgba(8,8,13,0.4) 100%),
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2024_Volkswagen_T-Roc_R-Line_TSI_-_1498cc_1.5_%28150PS%29_Petrol_-_Kings_Red_-_03-2024%2C_Front.jpg/1920px-2024_Volkswagen_T-Roc_R-Line_TSI_-_1498cc_1.5_%28150PS%29_Petrol_-_Kings_Red_-_03-2024%2C_Front.jpg');
-            background-size: cover;
-            background-position: center right;
-        }
-
-        .gold-text {
-            background: linear-gradient(135deg, #e8d5a3, #c9a84c, #a07830);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #d4b05a, #c9a84c, #a07830);
-            color: #08080d;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 24px rgba(201,168,76,0.25);
-        }
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(201,168,76,0.4);
-        }
-
         .glass {
-            background: rgba(17,17,24,0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(51, 65, 85, 0.45);
         }
 
-        .car-card {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.06);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .glass-card {
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
         }
-        .car-card:hover {
-            border-color: rgba(201,168,76,0.35);
-            transform: translateY(-6px);
-            box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
-        }
-        .car-card:hover .car-img { transform: scale(1.06); }
-
-        .car-img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        .glass-card:hover {
+            border-color: rgba(245, 158, 11, 0.35);
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.08);
+            transform: translateY(-4px);
         }
 
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
+        .hero-glow {
+            background:
+                radial-gradient(ellipse 70% 50% at 20% 0%, rgba(245, 158, 11, 0.12) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 40% at 90% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 50%),
+                rgb(2, 6, 23);
+        }
+
+        .btn-amber {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            color: #020617;
             font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--gold);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 24px rgba(245, 158, 11, 0.25);
         }
-        .section-label::before {
-            content: '';
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--gold);
+        .btn-amber:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4);
         }
+        .btn-amber:active { transform: translateY(0); }
 
-        .stat-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            backdrop-filter: blur(10px);
+        .input-field {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(51, 65, 85, 0.7);
+            color: #f8fafc;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-
-        .step-num {
-            font-size: 3rem;
-            font-weight: 900;
-            line-height: 1;
-            color: rgba(201,168,76,0.15);
-        }
-
-        .feature-card {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-        }
-        .feature-card:hover {
-            border-color: rgba(201,168,76,0.25);
-            background: rgba(201,168,76,0.03);
-        }
-
-        .testimonial-card {
-            background: var(--card);
-            border: 1px solid rgba(255,255,255,0.06);
+        .input-field:focus {
+            outline: none;
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
         }
 
         .wa-btn {
             background: #25d366;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
         }
         .wa-btn:hover {
             background: #1ebe57;
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
         }
 
         .nav-link {
             position: relative;
-            color: rgba(255,255,255,0.55);
+            color: rgba(148, 163, 184, 1);
             font-size: 0.875rem;
             font-weight: 500;
             transition: color 0.2s;
         }
-        .nav-link:hover { color: var(--gold-light); }
+        .nav-link:hover { color: #fbbf24; }
         .nav-link::after {
             content: '';
             position: absolute;
@@ -158,440 +91,355 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gold);
+            background: #f59e0b;
             transition: width 0.3s;
         }
         .nav-link:hover::after { width: 100%; }
 
-        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
+        .car-img-wrap { aspect-ratio: 16 / 10; }
+        .car-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .animate-fade-up { animation: fadeUp 0.7s ease forwards; }
-        .delay-1 { animation-delay: 0.1s; opacity: 0; }
-        .delay-2 { animation-delay: 0.2s; opacity: 0; }
-        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .glass-card:hover .car-img-wrap img { transform: scale(1.05); }
+
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
     </style>
 </head>
-<body class="antialiased mesh-bg">
+<body class="bg-slate-950 text-white antialiased hero-glow min-h-screen">
 
-    <!-- Header -->
+    <!-- Navbar -->
     <header class="fixed top-0 inset-x-0 z-50 glass">
-        <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg btn-gold flex items-center justify-center text-sm font-black">AR</div>
+                <div class="w-9 h-9 rounded-lg btn-amber flex items-center justify-center text-xs font-black">AR</div>
                 <div>
-                    <p class="text-lg font-black leading-none tracking-wide">AUTO<span class="gold-text">RENT</span></p>
-                    <p class="text-[10px] text-white/40 tracking-widest uppercase">Location de voitures</p>
+                    <p class="text-lg font-black tracking-wide leading-none">AUTO<span class="text-amber-500">RENT</span></p>
+                    <p class="text-[10px] text-slate-500 tracking-widest uppercase mt-0.5">Meknès · Fès</p>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-10">
+            <nav class="hidden lg:flex items-center gap-9">
+                <a href="#booking" class="nav-link">Réserver</a>
                 <a href="#fleet" class="nav-link">Notre flotte</a>
-                <a href="#how" class="nav-link">Comment ça marche</a>
-                <a href="#features" class="nav-link">Pourquoi nous</a>
-                <a href="#reviews" class="nav-link">Avis clients</a>
+                <a href="#features" class="nav-link">Services</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/212665173719" class="hidden sm:flex btn-gold text-sm px-5 py-2.5 rounded-lg items-center gap-2">
+                <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="hidden sm:inline-flex btn-amber text-sm px-5 py-2.5 rounded-lg items-center gap-2">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                    Réserver
+                    WhatsApp
                 </a>
-                <button id="menu-btn" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg border border-white/10" aria-label="Menu">
-                    <span class="w-5 h-0.5 bg-white/70 block"></span>
-                    <span class="w-5 h-0.5 bg-white/70 block"></span>
-                    <span class="w-3 h-0.5 bg-white/70 block self-end mr-2.5"></span>
+                <button id="menu-btn" type="button" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg border border-slate-700/60" aria-label="Menu">
+                    <span class="w-5 h-0.5 bg-slate-300 block"></span>
+                    <span class="w-5 h-0.5 bg-slate-300 block"></span>
+                    <span class="w-3 h-0.5 bg-slate-300 block self-end mr-2"></span>
                 </button>
             </div>
         </div>
 
         <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
-            <nav class="px-5 pb-5 flex flex-col gap-4 border-t border-white/5 pt-4">
-                <a href="#fleet" class="text-white/70 hover:text-[#c9a84c] py-1">Notre flotte</a>
-                <a href="#how" class="text-white/70 hover:text-[#c9a84c] py-1">Comment ça marche</a>
-                <a href="#features" class="text-white/70 hover:text-[#c9a84c] py-1">Pourquoi nous</a>
-                <a href="#reviews" class="text-white/70 hover:text-[#c9a84c] py-1">Avis clients</a>
-                <a href="#contact" class="text-white/70 hover:text-[#c9a84c] py-1">Contact</a>
-                <a href="https://wa.me/212600000000" class="btn-gold text-center py-3 rounded-lg text-sm">Réserver sur WhatsApp</a>
+            <nav class="px-4 sm:px-6 pb-5 flex flex-col gap-3 border-t border-slate-800/60 pt-4">
+                <a href="#booking" class="text-slate-400 hover:text-amber-500 py-1 text-sm">Réserver</a>
+                <a href="#fleet" class="text-slate-400 hover:text-amber-500 py-1 text-sm">Notre flotte</a>
+                <a href="#features" class="text-slate-400 hover:text-amber-500 py-1 text-sm">Services</a>
+                <a href="#contact" class="text-slate-400 hover:text-amber-500 py-1 text-sm">Contact</a>
+                <a href="https://wa.me/212665173719" class="btn-amber text-center py-3 rounded-lg text-sm mt-1">WhatsApp</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-5 py-16 w-full">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Hero + Booking Widget -->
+    <section id="booking" class="pt-28 pb-20 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div>
-                    <p class="section-label animate-fade-up">Agence de location — Maroc</p>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mt-5 leading-[1.15] animate-fade-up delay-1">
-                        Une location<br>
-                        <span class="gold-text">premium & confortable</span>
+                    <span class="inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase">
+                        <span class="w-6 h-px bg-amber-500"></span>
+                        Location premium · Maroc
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mt-5 leading-[1.1]">
+                        Explorez le Maroc<br>
+                        <span class="text-amber-500">en toute élégance</span>
                     </h1>
-                    <p class="text-white/55 text-lg mt-6 leading-relaxed max-w-lg animate-fade-up delay-2">
-                        Flotte moderne, tarifs transparents et livraison gratuite à l'aéroport. Réservez votre voiture en quelques minutes via WhatsApp, sans complication.
+                    <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-lg">
+                        Meknès, Fès et au-delà — flotte récente, tarifs transparents et livraison gratuite à l'aéroport. Réservez en quelques clics.
                     </p>
-                    <div class="flex flex-wrap gap-4 mt-10 animate-fade-up delay-3">
-                        <a href="#fleet" class="btn-gold px-8 py-3.5 rounded-lg text-sm">Voir la flotte</a>
-                        <a href="https://wa.me/212600000000" class="px-8 py-3.5 rounded-lg text-sm font-semibold border border-white/15 hover:border-[#c9a84c]/50 hover:text-[#e8d5a3] transition-all">
-                            Nous contacter
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hidden lg:grid grid-cols-2 gap-4">
-                    <div class="stat-card rounded-2xl p-6 col-span-2">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-4xl font-black gold-text">+500</p>
-                                <p class="text-white/40 text-sm mt-1">Clients satisfaits</p>
-                            </div>
-                            <div class="flex -space-x-2">
-                                <div class="w-10 h-10 rounded-full bg-[#c9a84c]/20 border-2 border-[#08080d] flex items-center justify-center text-xs">★</div>
-                                <div class="w-10 h-10 rounded-full bg-[#c9a84c]/30 border-2 border-[#08080d] flex items-center justify-center text-xs">★</div>
-                                <div class="w-10 h-10 rounded-full bg-[#c9a84c]/40 border-2 border-[#08080d] flex items-center justify-center text-xs">★</div>
-                                <div class="w-10 h-10 rounded-full bg-[#c9a84c] border-2 border-[#08080d] flex items-center justify-center text-xs text-[#08080d] font-bold">4.9</div>
-                            </div>
+                    <div class="flex flex-wrap gap-6 mt-10 text-sm">
+                        <div>
+                            <p class="text-2xl font-black text-amber-500">+500</p>
+                            <p class="text-slate-500 mt-0.5">Clients satisfaits</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-black text-amber-500">24/7</p>
+                            <p class="text-slate-500 mt-0.5">Assistance</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-black text-amber-500">4.9★</p>
+                            <p class="text-slate-500 mt-0.5">Note moyenne</p>
                         </div>
                     </div>
-                    <div class="stat-card rounded-2xl p-6">
-                        <p class="text-3xl font-black gold-text">+50</p>
-                        <p class="text-white/40 text-sm mt-1">Véhicules disponibles</p>
-                    </div>
-                    <div class="stat-card rounded-2xl p-6">
-                        <p class="text-3xl font-black gold-text">24/7</p>
-                        <p class="text-white/40 text-sm mt-1">Support continu</p>
-                    </div>
                 </div>
-            </div>
 
-            <div class="mt-16 pt-8 border-t border-white/5 flex flex-wrap justify-center lg:justify-start gap-8 text-white/30 text-xs font-medium tracking-widest uppercase">
-                <span>✓ Assurance tous risques</span>
-                <span>✓ Livraison gratuite</span>
-                <span>✓ Sans frais cachés</span>
-                <span>✓ Véhicules récents</span>
+                <!-- Booking Widget -->
+                <div class="glass rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/30">
+                    <h2 class="text-xl font-bold mb-1">Réservez votre véhicule</h2>
+                    <p class="text-slate-500 text-sm mb-6">Disponibilité confirmée en quelques minutes</p>
+
+                    <form id="booking-form" class="space-y-4">
+                        <div>
+                            <label for="lieu" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Lieu de prise en charge</label>
+                            <select id="lieu" name="lieu" required class="input-field w-full rounded-xl px-4 py-3.5 text-sm appearance-none cursor-pointer">
+                                <option value="Meknès">Meknès — Centre-ville</option>
+                                <option value="Fès">Fès — Centre-ville</option>
+                                <option value="Aéroport Fès-Saïss">Fès — Aéroport Saïss</option>
+                                <option value="Gare Meknès">Meknès — Gare ONCF</option>
+                            </select>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="date-debut" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Date de début</label>
+                                <input type="date" id="date-debut" name="date-debut" required class="input-field w-full rounded-xl px-4 py-3.5 text-sm">
+                            </div>
+                            <div>
+                                <label for="date-fin" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Date de fin</label>
+                                <input type="date" id="date-fin" name="date-fin" required class="input-field w-full rounded-xl px-4 py-3.5 text-sm">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-amber w-full py-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 mt-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            Rechercher
+                        </button>
+                    </form>
+                    <p class="text-slate-600 text-xs text-center mt-4">Confirmation instantanée via WhatsApp</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Fleet -->
-    <section id="fleet" class="max-w-7xl mx-auto px-5 py-24">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-            <div>
-                <p class="section-label">Notre flotte</p>
-                <h2 class="text-3xl md:text-4xl font-black mt-3">Choisissez votre véhicule idéal</h2>
-                <p class="text-white/45 mt-3 max-w-md">Des véhicules récents et entretenus avec soin, adaptés à tous vos besoins</p>
+    <section id="fleet" class="py-20 px-4 sm:px-6 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase">
+                        <span class="w-6 h-px bg-amber-500"></span>
+                        Notre flotte
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black mt-3">Véhicules disponibles</h2>
+                    <p class="text-slate-400 mt-2 max-w-md">Entretenus avec soin, prêts pour vos routes marocaines</p>
+                </div>
+                <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20voir%20toute%20votre%20flotte%20disponible." class="text-amber-500 text-sm font-semibold hover:text-amber-400 transition-colors flex items-center gap-2 shrink-0">
+                    Voir toute la flotte
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
             </div>
-            <a href="https://wa.me/212600000000" class="text-[#c9a84c] text-sm font-semibold hover:text-[#e8d5a3] transition-colors flex items-center gap-2 shrink-0">
-                Voir tous les véhicules
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
-            <!-- T-Roc -->
-            <article class="car-card rounded-2xl overflow-hidden group">
-                <div class="relative h-56 overflow-hidden">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/2024_Volkswagen_T-Roc_R-Line_TSI_-_1498cc_1.5_%28150PS%29_Petrol_-_Kings_Red_-_03-2024%2C_Front.jpg/1280px-2024_Volkswagen_T-Roc_R-Line_TSI_-_1498cc_1.5_%28150PS%29_Petrol_-_Kings_Red_-_03-2024%2C_Front.jpg" alt="Volkswagen T-Roc" class="car-img" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#111118] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase bg-[#c9a84c] text-[#08080d] px-3 py-1 rounded">SUV</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start gap-3">
-                        <div>
-                            <p class="text-white/35 text-xs mb-1">Volkswagen</p>
-                            <h3 class="text-xl font-bold">T-Roc</h3>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-2xl font-black gold-text">450</p>
-                            <p class="text-white/35 text-xs">MAD / jour</p>
-                        </div>
+                <!-- Dacia Logan -->
+                <article class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="car-img-wrap overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=80"
+                            alt="Dacia Logan"
+                            loading="lazy"
+                            width="1200"
+                            height="750"
+                        >
                     </div>
-                    <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-white/5">
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Boîte</p>
-                            <p class="text-xs font-semibold mt-0.5">Automatique</p>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded">Économique</span>
+                                <h3 class="text-xl font-bold mt-3">Dacia Logan</h3>
+                                <p class="text-slate-500 text-xs mt-1">Berline · Idéale ville & budget</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <p class="text-2xl font-black text-amber-500">250</p>
+                                <p class="text-slate-500 text-xs">DH / jour</p>
+                            </div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <p class="text-white/30 text-[10px]">Carburant</p>
-                            <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                        <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-slate-800/80 text-center">
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Boîte</p>
+                                <p class="text-xs font-semibold mt-0.5">Manuelle</p>
+                            </div>
+                            <div class="border-x border-slate-800/80">
+                                <p class="text-slate-600 text-[10px] uppercase">Carburant</p>
+                                <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Places</p>
+                                <p class="text-xs font-semibold mt-0.5">5</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Places</p>
-                            <p class="text-xs font-semibold mt-0.5">5</p>
-                        </div>
+                        <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Dacia%20Logan%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
+                            Réserver
+                        </a>
                     </div>
-                    <a href="https://wa.me/212600000000?text=Je%20veux%20r%C3%A9server%20un%20T-Roc" class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                        Réserver
-                    </a>
-                </div>
-            </article>
+                </article>
 
-            <!-- Sandero -->
-            <article class="car-card rounded-2xl overflow-hidden group">
-                <div class="relative h-56 overflow-hidden">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dacia_Sandero_III_1X7A6451.jpg/1280px-Dacia_Sandero_III_1X7A6451.jpg" alt="Dacia Sandero" class="car-img" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#111118] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase bg-emerald-500 text-white px-3 py-1 rounded">Économique</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start gap-3">
-                        <div>
-                            <p class="text-white/35 text-xs mb-1">Dacia</p>
-                            <h3 class="text-xl font-bold">Sandero</h3>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-2xl font-black gold-text">250</p>
-                            <p class="text-white/35 text-xs">MAD / jour</p>
-                        </div>
+                <!-- Renault Clio 5 -->
+                <article class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="car-img-wrap overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1605527072515-18d80e1433f5?auto=format&fit=crop&w=1200&q=80"
+                            alt="Renault Clio 5"
+                            loading="lazy"
+                            width="1200"
+                            height="750"
+                        >
                     </div>
-                    <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-white/5">
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Boîte</p>
-                            <p class="text-xs font-semibold mt-0.5">Manuelle</p>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-400 bg-sky-400/10 px-2.5 py-1 rounded">Populaire</span>
+                                <h3 class="text-xl font-bold mt-3">Renault Clio 5</h3>
+                                <p class="text-slate-500 text-xs mt-1">Citadine · Confort & agilité</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <p class="text-2xl font-black text-amber-500">300</p>
+                                <p class="text-slate-500 text-xs">DH / jour</p>
+                            </div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <p class="text-white/30 text-[10px]">Carburant</p>
-                            <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                        <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-slate-800/80 text-center">
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Boîte</p>
+                                <p class="text-xs font-semibold mt-0.5">Manuelle</p>
+                            </div>
+                            <div class="border-x border-slate-800/80">
+                                <p class="text-slate-600 text-[10px] uppercase">Carburant</p>
+                                <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Places</p>
+                                <p class="text-xs font-semibold mt-0.5">5</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Places</p>
-                            <p class="text-xs font-semibold mt-0.5">5</p>
-                        </div>
+                        <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Renault%20Clio%205%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
+                            Réserver
+                        </a>
                     </div>
-                    <a href="https://wa.me/212600000000?text=Je%20veux%20r%C3%A9server%20une%20Dacia%20Sandero" class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                        Réserver
-                    </a>
-                </div>
-            </article>
+                </article>
 
-            <!-- Sportage -->
-            <article class="car-card rounded-2xl overflow-hidden group md:col-span-2 lg:col-span-1">
-                <div class="relative h-56 overflow-hidden">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kia_Sportage_%28NQ5%29_1X7A0326.jpg/1280px-Kia_Sportage_%28NQ5%29_1X7A0326.jpg" alt="Kia Sportage" class="car-img" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#111118] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 text-[10px] font-bold tracking-widest uppercase bg-[#c9a84c] text-[#08080d] px-3 py-1 rounded">Premium ★</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-start gap-3">
-                        <div>
-                            <p class="text-white/35 text-xs mb-1">Kia</p>
-                            <h3 class="text-xl font-bold">Sportage</h3>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-2xl font-black gold-text">600</p>
-                            <p class="text-white/35 text-xs">MAD / jour</p>
-                        </div>
+                <!-- Volkswagen T-Roc -->
+                <article class="glass-card rounded-2xl overflow-hidden group md:col-span-2 lg:col-span-1">
+                    <div class="car-img-wrap overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80"
+                            alt="Volkswagen T-Roc"
+                            loading="lazy"
+                            width="1200"
+                            height="750"
+                        >
                     </div>
-                    <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-white/5">
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Boîte</p>
-                            <p class="text-xs font-semibold mt-0.5">Automatique</p>
+                    <div class="p-6">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-amber-500 bg-amber-500/10 px-2.5 py-1 rounded">SUV Luxury</span>
+                                <h3 class="text-xl font-bold mt-3">Volkswagen T-Roc</h3>
+                                <p class="text-slate-500 text-xs mt-1">SUV · Premium & spacieux</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <p class="text-2xl font-black text-amber-500">400</p>
+                                <p class="text-slate-500 text-xs">DH / jour</p>
+                            </div>
                         </div>
-                        <div class="text-center border-x border-white/5">
-                            <p class="text-white/30 text-[10px]">Carburant</p>
-                            <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                        <div class="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-slate-800/80 text-center">
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Boîte</p>
+                                <p class="text-xs font-semibold mt-0.5">Automatique</p>
+                            </div>
+                            <div class="border-x border-slate-800/80">
+                                <p class="text-slate-600 text-[10px] uppercase">Carburant</p>
+                                <p class="text-xs font-semibold mt-0.5">Diesel</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-600 text-[10px] uppercase">Places</p>
+                                <p class="text-xs font-semibold mt-0.5">5</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <p class="text-white/30 text-[10px]">Places</p>
-                            <p class="text-xs font-semibold mt-0.5">5</p>
-                        </div>
+                        <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20Volkswagen%20T-Roc%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
+                            Réserver
+                        </a>
                     </div>
-                    <a href="https://wa.me/212600000000?text=Je%20veux%20r%C3%A9server%20un%20Kia%20Sportage" class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                        Réserver
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
+                </article>
 
-    <!-- How it works -->
-    <section id="how" class="border-y border-white/5 py-24">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-16">
-                <p class="section-label justify-center">Simple & rapide</p>
-                <h2 class="text-3xl md:text-4xl font-black mt-3">Comment réserver ?</h2>
-                <p class="text-white/45 mt-3">3 étapes et vous êtes prêt à partir</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 relative">
-                <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent"></div>
-                <div class="text-center relative">
-                    <p class="step-num">01</p>
-                    <div class="w-14 h-14 rounded-2xl btn-gold flex items-center justify-center mx-auto -mt-4 mb-5">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Choisissez votre voiture</h3>
-                    <p class="text-white/45 text-sm leading-relaxed">Parcourez notre flotte et sélectionnez le véhicule adapté à vos besoins et votre budget</p>
-                </div>
-                <div class="text-center relative">
-                    <p class="step-num">02</p>
-                    <div class="w-14 h-14 rounded-2xl btn-gold flex items-center justify-center mx-auto -mt-4 mb-5">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Envoyez-nous un message</h3>
-                    <p class="text-white/45 text-sm leading-relaxed">Cliquez sur Réserver et envoyez-nous un message WhatsApp — nous répondons immédiatement</p>
-                </div>
-                <div class="text-center relative">
-                    <p class="step-num">03</p>
-                    <div class="w-14 h-14 rounded-2xl btn-gold flex items-center justify-center mx-auto -mt-4 mb-5">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Prenez la route</h3>
-                    <p class="text-white/45 text-sm leading-relaxed">Nous vous livrons le véhicule au lieu et à l'heure de votre choix</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="max-w-7xl mx-auto px-5 py-24">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <p class="section-label">Nos avantages</p>
-                <h2 class="text-3xl md:text-4xl font-black mt-3 leading-tight">Pourquoi plus de<br><span class="gold-text">500 clients</span> nous font confiance</h2>
-                <p class="text-white/45 mt-4 leading-relaxed">Nous offrons une expérience de location exceptionnelle au Maroc, avec un engagement total envers la qualité et la transparence.</p>
-                <a href="https://wa.me/212600000000" class="inline-flex btn-gold px-6 py-3 rounded-lg text-sm mt-8">Commencer</a>
+    <section id="features" class="py-20 px-4 sm:px-6 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase justify-center">
+                    <span class="w-6 h-px bg-amber-500"></span>
+                    Nos services
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3">Pourquoi Auto Rent ?</h2>
+                <p class="text-slate-400 mt-3">Une expérience premium, pensée pour le Maroc</p>
             </div>
-            <div class="grid sm:grid-cols-2 gap-4">
-                <div class="feature-card rounded-2xl p-6">
-                    <div class="w-11 h-11 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Livraison gratuite à l'aéroport</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Remise immédiate à votre arrivée à l'aéroport ou à la gare, sans attente</p>
+                    <h3 class="font-bold text-sm mb-2">Livraison aéroport</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Prise en charge à Fès-Saïss ou en centre-ville</p>
                 </div>
-                <div class="feature-card rounded-2xl p-6">
-                    <div class="w-11 h-11 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Assurance tous risques</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Tous nos véhicules sont entièrement assurés pour votre tranquillité d'esprit</p>
+                    <h3 class="font-bold text-sm mb-2">Assurance incluse</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Tous risques pour rouler l'esprit tranquille</p>
                 </div>
-                <div class="feature-card rounded-2xl p-6">
-                    <div class="w-11 h-11 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Tarifs transparents</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Aucun frais caché — le prix affiché est le prix que vous payez</p>
+                    <h3 class="font-bold text-sm mb-2">Sans frais cachés</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Le prix affiché est le prix final</p>
                 </div>
-                <div class="feature-card rounded-2xl p-6">
-                    <div class="w-11 h-11 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center text-[#c9a84c] mb-4">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Support 24/7</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Notre équipe est disponible à tout moment, partout au Maroc</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews -->
-    <section id="reviews" class="border-t border-white/5 py-24">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="text-center mb-14">
-                <p class="section-label justify-center">Avis clients</p>
-                <h2 class="text-3xl md:text-4xl font-black mt-3">Ce que disent nos clients</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="testimonial-card rounded-2xl p-7">
-                    <div class="flex gap-1 text-[#c9a84c] mb-4 text-sm">★★★★★</div>
-                    <p class="text-white/60 text-sm leading-relaxed">"Service excellent, voiture propre et récente. La livraison à l'aéroport était pile à l'heure. Je recommande vivement !"</p>
-                    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-[#c9a84c]/20 flex items-center justify-center font-bold text-[#c9a84c] text-sm">Y</div>
-                        <div>
-                            <p class="font-semibold text-sm">Youssef El Morabiti</p>
-                            <p class="text-white/30 text-xs">Casablanca</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card rounded-2xl p-7">
-                    <div class="flex gap-1 text-[#c9a84c] mb-4 text-sm">★★★★★</div>
-                    <p class="text-white/60 text-sm leading-relaxed">"Tarifs raisonnables et transparents. J'ai réservé via WhatsApp et j'ai eu une réponse en quelques minutes. Expérience fluide du début à la fin."</p>
-                    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-[#c9a84c]/20 flex items-center justify-center font-bold text-[#c9a84c] text-sm">S</div>
-                        <div>
-                            <p class="font-semibold text-sm">Sara Idrissi</p>
-                            <p class="text-white/30 text-xs">Marrakech</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card rounded-2xl p-7">
-                    <div class="flex gap-1 text-[#c9a84c] mb-4 text-sm">★★★★★</div>
-                    <p class="text-white/60 text-sm leading-relaxed">"J'ai loué un Sportage pour un voyage en famille, très confortable. Équipe professionnelle et serviable. Je reviendrai sans hésiter."</p>
-                    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-[#c9a84c]/20 flex items-center justify-center font-bold text-[#c9a84c] text-sm">M</div>
-                        <div>
-                            <p class="font-semibold text-sm">Mohamed El Alami</p>
-                            <p class="text-white/30 text-xs">Tanger</p>
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-sm mb-2">Support 24/7</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Assistance WhatsApp à toute heure</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="max-w-5xl mx-auto px-5 py-24">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#c9a84c]/20 via-[#111118] to-[#08080d]"></div>
-            <div class="absolute inset-0 border border-[#c9a84c]/20 rounded-3xl"></div>
-            <div class="relative p-12 md:p-16 text-center">
-                <p class="section-label justify-center">Commencez votre voyage</p>
-                <h2 class="text-3xl md:text-5xl font-black mt-4">Prêt à partir ?</h2>
-                <p class="text-white/50 mt-4 max-w-md mx-auto">Contactez-nous maintenant et réservez votre voiture en moins d'une minute. Notre équipe vous attend !</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                    <a href="https://wa.me/212600000000" class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl text-base">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                        +212 600 000 000
-                    </a>
-                    <a href="#fleet" class="inline-flex items-center justify-center gap-2 font-semibold px-10 py-4 rounded-xl border border-white/15 hover:border-[#c9a84c]/40 transition-all text-base">
-                        Voir la flotte
-                    </a>
-                </div>
-            </div>
+    <section id="contact" class="py-20 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 text-center">
+            <h2 class="text-3xl sm:text-4xl font-black">Prêt à partir ?</h2>
+            <p class="text-slate-400 mt-4 max-w-md mx-auto">Contactez-nous sur WhatsApp et recevez une confirmation en moins d'une minute.</p>
+            <a href="https://wa.me/212665173719?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl mt-8 text-base">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
+                +212 665 173 719
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/5 py-14">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="grid md:grid-cols-4 gap-10 mb-12">
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-9 h-9 rounded-lg btn-gold flex items-center justify-center text-sm font-black">AR</div>
-                        <p class="text-xl font-black">AUTO<span class="gold-text">RENT</span></p>
-                    </div>
-                    <p class="text-white/40 text-sm leading-relaxed max-w-sm">Agence de location de voitures premium au Maroc. Nous vous offrons la meilleure expérience à des tarifs compétitifs.</p>
-                </div>
-                <div>
-                    <p class="font-bold text-sm mb-4 text-white/70">Liens rapides</p>
-                    <ul class="space-y-2 text-sm text-white/40">
-                        <li><a href="#fleet" class="hover:text-[#c9a84c] transition-colors">Notre flotte</a></li>
-                        <li><a href="#how" class="hover:text-[#c9a84c] transition-colors">Comment ça marche</a></li>
-                        <li><a href="#features" class="hover:text-[#c9a84c] transition-colors">Pourquoi nous</a></li>
-                        <li><a href="#contact" class="hover:text-[#c9a84c] transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="font-bold text-sm mb-4 text-white/70">Contact</p>
-                    <ul class="space-y-2 text-sm text-white/40">
-                        <li>+212 600 000 000</li>
-                        <li>Casablanca, Maroc</li>
-                        <li>Disponible 24/7</li>
-                    </ul>
-                </div>
+    <footer class="border-t border-slate-800/60 py-12 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <div class="flex items-center gap-3">
+                <p class="text-lg font-black text-white">AUTO<span class="text-amber-500">RENT</span></p>
             </div>
-            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/25">
-                <p>© 2026 Auto Rent — Tous droits réservés</p>
-                <p>Conçu avec soin au Maroc 🇲🇦</p>
-            </div>
+            <p>Meknès & Fès · Maroc 🇲🇦</p>
+            <p>© 2026 Auto Rent — Tous droits réservés</p>
         </div>
     </footer>
 
@@ -600,6 +448,57 @@
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
     </a>
 
+    <script>
+        const WA = '212665173719';
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.style.maxHeight = menuOpen ? '320px' : '0';
+            mobileMenu.style.opacity = menuOpen ? '1' : '0';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.style.maxHeight = '0';
+                mobileMenu.style.opacity = '0';
+            });
+        });
+
+        // Date inputs — min = today
+        const today = new Date().toISOString().split('T')[0];
+        const dateDebut = document.getElementById('date-debut');
+        const dateFin = document.getElementById('date-fin');
+        dateDebut.min = today;
+        dateFin.min = today;
+
+        dateDebut.addEventListener('change', () => {
+            dateFin.min = dateDebut.value || today;
+            if (dateFin.value && dateFin.value < dateDebut.value) dateFin.value = dateDebut.value;
+        });
+
+        // Booking form → WhatsApp
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const lieu = document.getElementById('lieu').value;
+            const debut = document.getElementById('date-debut').value;
+            const fin = document.getElementById('date-fin').value;
+
+            if (fin < debut) {
+                alert('La date de fin doit être après la date de début.');
+                return;
+            }
+
+            const fmt = (d) => new Date(d + 'T00:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+            const msg = `Bonjour, je souhaite louer une voiture.\n\n📍 Lieu : ${lieu}\n📅 Du : ${fmt(debut)}\n📅 Au : ${fmt(fin)}\n\nMerci de me confirmer la disponibilité.`;
+
+            window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+        });
     </script>
 </body>
 </html>
