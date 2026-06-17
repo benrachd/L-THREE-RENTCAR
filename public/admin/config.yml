@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "/"
+public_folder: "/"
+
+collections:
+  - name: "fleet"
+    label: "Notre Flotte"
+    folder: "/"
+    filter: {field: "id", value: "fleet-data"}
+    fields:
+      - {label: "Template ID", name: "id", widget: "hidden", default: "fleet-data"}
+      - label: "Voitures"
+        name: "cars"
+        widget: "list"
+        fields:
+          - {label: "Nom de la voiture", name: "name", widget: "string"}
+          - {label: "Prix por jour (DH)", name: "price", widget: "number"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Carburant", name: "fuel", widget: "string", default: "Diesel"}
+          - {label: "Transmission", name: "transmission", widget: "string", default: "Manuelle"}
+          - {label: "Places", name: "seats", widget: "number", default: 5}
