@@ -146,10 +146,9 @@
             inset: 0;
             z-index: 2;
             background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.4) 50%,
-                rgba(0, 0, 0, 0.1) 100%
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0.3) 50%,
+                rgba(0, 0, 0, 0.7) 100%
             );
             pointer-events: none;
         }
@@ -157,6 +156,13 @@
         .hero-content {
             position: relative;
             z-index: 10;
+        }
+
+        .hero-copy h1,
+        .hero-copy h1 span,
+        .hero-copy .hero-stat-value,
+        .hero-copy .hero-stat-label {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -221,7 +227,7 @@
 
         <div class="hero-content max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
+                <div class="hero-copy">
                     <span class="inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase">
                         <span class="w-6 h-px bg-amber-500"></span>
                         Location premium · Maroc
@@ -230,26 +236,26 @@
                         Explorez le Maroc<br>
                         <span class="text-amber-500">en toute élégance</span>
                     </h1>
-                    <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-lg">
+                    <p class="text-slate-300 text-lg mt-6 leading-relaxed max-w-lg">
                         Meknès, Fès et au-delà — flotte récente, tarifs transparents et livraison gratuite à l'aéroport. Réservez en quelques clics.
                     </p>
                     <div class="flex flex-wrap gap-6 mt-10 text-sm">
                         <div>
-                            <p class="text-2xl font-black text-amber-500">+500</p>
-                            <p class="text-slate-500 mt-0.5">Clients satisfaits</p>
+                            <p class="hero-stat-value text-2xl font-black text-amber-500">+500</p>
+                            <p class="hero-stat-label text-slate-300 mt-0.5">Clients satisfaits</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-amber-500">24/7</p>
-                            <p class="text-slate-500 mt-0.5">Assistance</p>
+                            <p class="hero-stat-value text-2xl font-black text-amber-500">24/7</p>
+                            <p class="hero-stat-label text-slate-300 mt-0.5">Assistance</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-amber-500">4.9★</p>
-                            <p class="text-slate-500 mt-0.5">Note moyenne</p>
+                            <p class="hero-stat-value text-2xl font-black text-amber-500">4.9★</p>
+                            <p class="hero-stat-label text-slate-300 mt-0.5">Note moyenne</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/30">
+                <div class="p-6 sm:p-8">
                     <h2 class="text-xl font-bold mb-1">Réservez votre véhicule</h2>
                     <p class="text-slate-500 text-sm mb-6">Disponibilité confirmée en quelques minutes</p>
 
