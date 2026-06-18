@@ -168,6 +168,23 @@
             position: relative;
             z-index: 10;
         }
+
+        .hero-glass-panel {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 0.45);
+        }
+
+        .hero-glass-panel h1,
+        .hero-glass-panel h2,
+        .hero-glass-panel p,
+        .hero-glass-panel label,
+        .hero-glass-panel .hero-eyebrow,
+        .hero-glass-panel .hero-stat-num,
+        .hero-glass-panel .hero-stat-label {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-white antialiased hero-glow min-h-screen">
@@ -231,8 +248,8 @@
 
         <div class="hero-content max-w-7xl mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
-                    <span class="inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase">
+                <div class="hero-glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/40">
+                    <span class="hero-eyebrow inline-flex items-center gap-2 text-amber-500 text-xs font-bold tracking-widest uppercase">
                         <span class="w-6 h-px bg-amber-500"></span>
                         Location premium · Maroc
                     </span>
@@ -240,26 +257,26 @@
                         Explorez le Maroc<br>
                         <span class="text-amber-500">en toute élégance</span>
                     </h1>
-                    <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-lg">
+                    <p class="text-slate-300 text-lg mt-6 leading-relaxed max-w-lg">
                         Meknès, Fès et au-delà — flotte récente, tarifs transparents et livraison gratuite à l'aéroport. Réservez en quelques clics.
                     </p>
                     <div class="flex flex-wrap gap-6 mt-10 text-sm">
                         <div>
-                            <p class="text-2xl font-black text-amber-500">+500</p>
-                            <p class="text-slate-500 mt-0.5">Clients satisfaits</p>
+                            <p class="hero-stat-num text-2xl font-black text-amber-500">+500</p>
+                            <p class="hero-stat-label text-slate-400 mt-0.5">Clients satisfaits</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-amber-500">24/7</p>
-                            <p class="text-slate-500 mt-0.5">Assistance</p>
+                            <p class="hero-stat-num text-2xl font-black text-amber-500">24/7</p>
+                            <p class="hero-stat-label text-slate-400 mt-0.5">Assistance</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-amber-500">4.9★</p>
-                            <p class="text-slate-500 mt-0.5">Note moyenne</p>
+                            <p class="hero-stat-num text-2xl font-black text-amber-500">4.9★</p>
+                            <p class="hero-stat-label text-slate-400 mt-0.5">Note moyenne</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/30">
+                <div class="hero-glass-panel rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/40">
                     <h2 class="text-xl font-bold mb-1">Réservez votre véhicule</h2>
                     <p class="text-slate-500 text-sm mb-6">Disponibilité confirmée en quelques minutes</p>
 
@@ -288,7 +305,7 @@
                             Rechercher
                         </button>
                     </form>
-                    <p class="text-slate-600 text-xs text-center mt-4">Confirmation instantanée via WhatsApp</p>
+                    <p class="text-slate-400 text-xs text-center mt-4">Confirmation instantanée via WhatsApp</p>
                 </div>
             </div>
         </div>
