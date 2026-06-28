@@ -223,6 +223,21 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
+        .site-header__logo {
+            width: 170px;
+            height: auto;
+            max-width: none;
+            max-height: none;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (min-width: 1024px) {
+            .site-header__logo {
+                width: 220px;
+            }
+        }
+
         .nav-wa-btn {
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #020617;
@@ -672,9 +687,9 @@
 
     <!-- Navbar -->
     <header class="fixed top-0 inset-x-0 z-50 site-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-            <a href="#" class="flex items-center gap-3 shrink-0">
-                <img src="images/logo.png" alt="L.THREE RENTCAR" class="h-[56px] lg:h-[72px] w-auto shrink-0 object-contain">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 lg:py-6 flex items-center justify-between gap-4">
+            <a href="#" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="L.THREE RENTCAR" class="site-header__logo">
                 <div>
                     <p class="text-base sm:text-lg font-black tracking-wide leading-none uppercase">L.THREE <span class="text-amber-500">RENTCAR</span></p>
                     <p class="text-[10px] text-white/60 tracking-widest uppercase mt-0.5" data-i18n="nav.cities">Fès · Centre-ville</p>
