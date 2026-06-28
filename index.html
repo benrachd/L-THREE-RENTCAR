@@ -238,6 +238,73 @@
             }
         }
 
+        .site-header__bar {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0.625rem 1rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+            align-items: center;
+            column-gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .site-header__bar {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                column-gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .site-header__bar {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                column-gap: 2rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .site-header__bar {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                column-gap: 2.5rem;
+            }
+        }
+
+        .site-header__brand {
+            justify-self: start;
+            min-width: 0;
+        }
+
+        .site-header__nav {
+            justify-self: center;
+            white-space: nowrap;
+        }
+
+        .site-header__actions {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 0;
+        }
+
+        @media (min-width: 640px) {
+            .site-header__actions {
+                gap: 0.75rem;
+            }
+        }
+
+        @media (min-width: 1536px) {
+            .site-header__actions {
+                gap: 1rem;
+            }
+        }
+
         .nav-wa-btn {
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             color: #020617;
@@ -687,35 +754,31 @@
 
     <!-- Navbar -->
     <header class="fixed top-0 inset-x-0 z-50 site-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 lg:py-6 flex items-center justify-between gap-4">
-            <a href="#" class="flex items-center gap-3">
+        <div class="site-header__bar">
+            <a href="#" class="site-header__brand flex items-center min-w-0">
                 <img src="images/logo.png" alt="L.THREE RENTCAR" class="site-header__logo">
-                <div>
-                    <p class="text-base sm:text-lg font-black tracking-wide leading-none uppercase">L.THREE <span class="text-amber-500">RENTCAR</span></p>
-                    <p class="text-[10px] text-white/60 tracking-widest uppercase mt-0.5" data-i18n="nav.cities">Fès · Centre-ville</p>
-                </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-9">
+            <nav class="site-header__nav hidden xl:flex items-center gap-6 2xl:gap-9">
                 <a href="#booking" class="nav-link" data-i18n="nav.book">Réserver</a>
                 <a href="#fleet" class="nav-link" data-i18n="nav.fleet">Notre flotte</a>
                 <a href="#features" class="nav-link" data-i18n="nav.features">Services</a>
                 <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
             </nav>
 
-            <div class="flex items-center gap-2 sm:gap-3">
-                <div class="lang-switch hidden sm:flex" role="group" aria-label="Language">
+            <div class="site-header__actions">
+                <div class="lang-switch hidden sm:flex shrink-0" role="group" aria-label="Language">
                     <button type="button" class="lang-btn active" data-lang="fr">FR</button>
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="en">EN</button>
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="ar">ع</button>
                 </div>
-                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="nav-wa-btn hidden md:inline-flex text-sm px-4 lg:px-5 py-2.5 rounded-lg items-center gap-2 shrink-0">
+                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="nav-wa-btn hidden lg:inline-flex text-sm px-4 xl:px-5 py-2 rounded-lg items-center gap-2 shrink-0">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                     <span data-i18n="nav.whatsapp">WhatsApp</span>
                 </a>
-                <button id="menu-btn" type="button" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg border border-slate-700/60" aria-label="Menu">
+                <button id="menu-btn" type="button" class="xl:hidden w-9 h-9 flex flex-col items-center justify-center gap-1 rounded-lg border border-slate-700/60 shrink-0" aria-label="Menu">
                     <span class="w-5 h-0.5 bg-slate-300 block"></span>
                     <span class="w-5 h-0.5 bg-slate-300 block"></span>
                     <span class="w-3 h-0.5 bg-slate-300 block self-end mr-2"></span>
@@ -723,7 +786,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+        <div id="mobile-menu" class="xl:hidden overflow-hidden max-h-0 opacity-0">
             <nav class="px-4 sm:px-6 pb-5 flex flex-col gap-3 border-t border-slate-800/60 pt-4">
                 <a href="#booking" class="text-slate-400 hover:text-amber-500 py-1 text-sm" data-i18n="nav.book">Réserver</a>
                 <a href="#fleet" class="text-slate-400 hover:text-amber-500 py-1 text-sm" data-i18n="nav.fleet">Notre flotte</a>
