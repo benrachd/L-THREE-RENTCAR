@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auto Rent — Location de voitures premium à Meknès et Fès. Réservation instantanée, livraison aéroport, flotte récente.">
-    <title>Auto Rent | Location Premium — Meknès & Fès</title>
+    <meta name="description" content="L.THREE RENTCAR — Location de voitures premium à Fès. Réservation instantanée, livraison aéroport, flotte récente.">
+    <title>L.THREE RENTCAR | Location Premium — Fès</title>
     <link rel="icon" type="image/svg+xml" href="https://api.iconify.design/lucide:car-front.svg?color=%23f59e0b">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -327,6 +327,135 @@
 
         .stars { color: #f59e0b; letter-spacing: 0.05em; }
 
+        .review-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 800;
+            font-size: 1.125rem;
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.22);
+            box-shadow: inset 0 0 0 1px rgba(51, 65, 85, 0.35);
+        }
+
+        .google-maps-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: rgba(226, 232, 240, 0.94);
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 1px 3px rgba(0, 0, 0, 0.18);
+        }
+
+        .google-maps-badge__icons {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.1875rem;
+            flex-shrink: 0;
+        }
+
+        .google-maps-badge svg { flex-shrink: 0; }
+
+        .google-reviews-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid rgba(51, 65, 85, 0.65);
+            transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .google-reviews-btn:hover {
+            color: #f59e0b;
+            border-color: rgba(245, 158, 11, 0.35);
+            background: rgba(245, 158, 11, 0.08);
+        }
+
+        .testimonials-title {
+            white-space: nowrap;
+            font-size: clamp(0.9375rem, 2.6vw + 0.55rem, 2.25rem);
+        }
+
+        .review-card {
+            transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .review-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 158, 11, 0.42);
+            box-shadow: 0 14px 44px rgba(0, 0, 0, 0.28), 0 0 52px rgba(245, 158, 11, 0.14);
+        }
+
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .review-card .review-quote {
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+        }
+
+        .review-author-name {
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: #f8fafc;
+            letter-spacing: 0.01em;
+        }
+
+        .review-author-meta {
+            font-size: 0.6875rem;
+            font-weight: 400;
+            color: rgba(148, 163, 184, 0.78);
+            margin-top: 0.3125rem;
+            line-height: 1.45;
+            letter-spacing: 0.015em;
+        }
+
+        .testimonials-footer {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .testimonials-footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #94a3b8;
+            transition: color 0.25s ease, gap 0.25s ease;
+        }
+
+        .testimonials-footer-link:hover {
+            color: #f59e0b;
+            gap: 0.5rem;
+        }
+
         .faq-item {
             background: rgba(15, 23, 42, 0.55);
             backdrop-filter: blur(12px);
@@ -408,13 +537,24 @@
         }
         .hours-status {
             display: inline-flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.5rem;
             font-size: 0.75rem;
             font-weight: 600;
             padding: 0.375rem 0.75rem;
             border-radius: 9999px;
             margin-bottom: 1.25rem;
+        }
+        .hours-status-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125rem;
+            line-height: 1.35;
+        }
+        .hours-status-detail {
+            font-size: 0.6875rem;
+            font-weight: 500;
+            opacity: 0.88;
         }
         .hours-status--open {
             color: #4ade80;
@@ -476,6 +616,56 @@
             transition: color 0.2s ease;
             text-decoration: none;
         }
+
+        .contact-info {
+            text-align: start;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .contact-info-icon {
+            width: 1.125rem;
+            height: 1.125rem;
+            flex-shrink: 0;
+            color: #f59e0b;
+            margin-top: 0.125rem;
+        }
+
+        .maps-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            margin-top: 0.625rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid rgba(51, 65, 85, 0.65);
+            transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+            text-decoration: none;
+        }
+
+        .maps-link-btn:hover {
+            color: #f59e0b;
+            border-color: rgba(245, 158, 11, 0.35);
+            background: rgba(245, 158, 11, 0.08);
+        }
+
+        .maps-link-btn svg { flex-shrink: 0; }
+
+        .contact-hours-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-hours-link:hover { color: #f59e0b; }
     </style>
 </head>
 <body class="bg-slate-950 text-white antialiased min-h-screen">
@@ -484,10 +674,10 @@
     <header class="fixed top-0 inset-x-0 z-50 site-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
             <a href="#" class="flex items-center gap-3 shrink-0">
-                <div class="w-10 h-10 rounded-lg btn-amber flex items-center justify-center text-xs font-black tracking-tight">AR</div>
+                <div class="w-10 h-10 rounded-lg btn-amber flex items-center justify-center text-xs font-black tracking-tight">L3</div>
                 <div>
-                    <p class="text-base sm:text-lg font-black tracking-wide leading-none uppercase">AUTO<span class="text-amber-500">RENT</span></p>
-                    <p class="text-[10px] text-white/60 tracking-widest uppercase mt-0.5" data-i18n="nav.cities">Meknès · Fès</p>
+                    <p class="text-base sm:text-lg font-black tracking-wide leading-none uppercase">L.THREE <span class="text-amber-500">RENTCAR</span></p>
+                    <p class="text-[10px] text-white/60 tracking-widest uppercase mt-0.5" data-i18n="nav.cities">Fès · Centre-ville</p>
                 </div>
             </a>
 
@@ -506,7 +696,7 @@
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="ar">ع</button>
                 </div>
-                <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="nav-wa-btn hidden md:inline-flex text-sm px-4 lg:px-5 py-2.5 rounded-lg items-center gap-2 shrink-0">
+                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="nav-wa-btn hidden md:inline-flex text-sm px-4 lg:px-5 py-2.5 rounded-lg items-center gap-2 shrink-0">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                     <span data-i18n="nav.whatsapp">WhatsApp</span>
                 </a>
@@ -531,7 +721,7 @@
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="ar">ع</button>
                 </div>
-                <a href="https://wa.me/212668744661" class="nav-wa-btn text-center py-3 rounded-lg text-sm mt-1 flex items-center justify-center gap-2" data-i18n="nav.whatsapp">WhatsApp</a>
+                <a href="https://wa.me/212668336781" class="nav-wa-btn text-center py-3 rounded-lg text-sm mt-1 flex items-center justify-center gap-2" data-i18n="nav.whatsapp">WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -546,11 +736,11 @@
                         <span data-i18n="hero.eyebrow">LOCATION PREMIUM • MAROC</span>
                     </p>
                     <h1 class="text-4xl sm:text-5xl lg:text-[3.35rem] xl:text-6xl font-black mt-5 leading-[1.08] text-white max-md:text-3xl max-md:mt-3">
-                        <span data-i18n="hero.title1">Explorez le Maroc</span><br>
-                        <span class="text-amber-500" data-i18n="hero.title2">en toute élégance</span>
+                        <span data-i18n="hero.title1">Location de voiture à Fès</span><br>
+                        <span class="text-amber-500" data-i18n="hero.title2">en toute confiance</span>
                     </h1>
                     <p class="text-white/95 text-base sm:text-lg mt-6 leading-relaxed max-w-lg mx-auto md:mx-0 max-md:hidden" data-i18n="hero.desc">
-                        Meknès, Fès et au-delà — flotte récente, tarifs transparents et livraison gratuite à l'aéroport. Réservez en quelques clics.
+                        Des véhicules récents, des tarifs transparents et une réservation rapide via WhatsApp. L.THREE RENTCAR vous accompagne à Fès avec une assistance 24h/24 et un service de livraison à l'aéroport Fès-Saïss.
                     </p>
 
                     <div class="flex flex-row flex-wrap justify-center gap-6 md:gap-12 w-full max-md:mt-4 max-md:gap-4">
@@ -594,10 +784,9 @@
                             <div class="booking-field booking-field--select">
                                 <svg class="booking-field-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                                 <select id="lieu" name="lieu" required aria-label="Lieu de prise en charge">
-                                    <option value="meknes" data-i18n="opt.meknes">Meknès — Centre-ville</option>
-                                    <option value="fes" data-i18n="opt.fes">Fès — Centre-ville</option>
+                                    <option value="fes" data-i18n="opt.fes">Fès Centre-ville</option>
                                     <option value="airport" data-i18n="opt.airport">Fès — Aéroport Saïss</option>
-                                    <option value="gare" data-i18n="opt.gare">Meknès — Gare ONCF</option>
+                                    <option value="gare" data-i18n="opt.gare">Fès — Gare ONCF</option>
                                 </select>
                                 <svg class="booking-field-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
@@ -644,7 +833,7 @@
                     <h2 class="text-3xl sm:text-4xl font-black mt-3" data-i18n="fleet.title">Véhicules disponibles</h2>
                     <p class="text-slate-400 mt-2 max-w-md" data-i18n="fleet.desc">Entretenus avec soin, prêts pour vos routes marocaines</p>
                 </div>
-                <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20voir%20toute%20votre%20flotte%20disponible." class="text-amber-500 text-sm font-semibold hover:text-amber-400 transition-colors flex items-center gap-2 shrink-0">
+                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20voir%20toute%20votre%20flotte%20disponible." class="text-amber-500 text-sm font-semibold hover:text-amber-400 transition-colors flex items-center gap-2 shrink-0">
                     <span data-i18n="fleet.view_all">Voir toute la flotte</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
@@ -678,7 +867,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_clio">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Manuelle &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Renault%20Clio%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Renault Clio">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -711,7 +900,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_logan">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Manuelle &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Dacia%20Logan%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Dacia Logan">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -744,7 +933,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_troc">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Automatique &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20Volkswagen%20T-Roc%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Volkswagen T-Roc">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -763,73 +952,85 @@
                     <span class="w-6 h-px bg-amber-500"></span>
                     <span data-i18n="testimonials.eyebrow">✨ Avis de nos clients</span>
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-3" data-i18n="testimonials.title">Ils nous font confiance</h2>
-                <p class="text-slate-400 mt-3" data-i18n="testimonials.desc">Des centaines de voyageurs satisfaits à Meknès, Fès et à l'aéroport</p>
+                <h2 class="testimonials-title font-black mt-3" data-i18n="testimonials.title">Ce que disent nos clients sur Google Maps</h2>
+                <p class="stars text-base mt-4" aria-label="Note 5.0 sur 5">⭐⭐⭐⭐⭐ <span class="text-white font-bold">5.0/5</span></p>
+                <p class="text-slate-400 mt-3" data-i18n="testimonials.desc">25 avis authentiques publiés sur Google Maps</p>
+                <a href="https://www.google.com/maps/place/L.THREE.RENTCAR/@34.0420844,-5.0092698,17z/data=!4m6!3m5!1s0xd9f8b70313eeb9b:0x7fd2d83f5dacd21b!8m2!3d34.0420844!4d-5.0092698!16s%2Fg%2F11yn1h8rty" target="_blank" rel="noopener noreferrer" class="google-reviews-btn" data-i18n="testimonials.link">Voir les 25 avis sur Google Maps ↗</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                <article class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
-                    <p class="stars text-sm mb-4" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                    <blockquote class="text-slate-300 text-sm leading-relaxed flex-1" data-i18n="testimonial1.text">
-                        « Service impeccable à Meknès. La Clio était propre, récente et livrée à mon hôtel en moins d'une heure. Équipe réactive sur WhatsApp, je recommande sans hésiter. »
+                <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
+                    <div class="review-card-header">
+                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" aria-label="Google Maps">
+                            <span class="google-maps-badge__icons" aria-hidden="true">
+                                <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                                <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
+                            </span>
+                            <span>Google Maps</span>
+                        </span>
+                    </div>
+                    <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial1.text">
+                        Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.
                     </blockquote>
                     <footer class="mt-6 pt-5 border-t border-slate-800/80 flex items-center gap-3">
-                        <img
-                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=faces&auto=format&q=80"
-                            alt="Photo de Youssef Benali"
-                            width="48"
-                            height="48"
-                            class="w-12 h-12 rounded-full object-cover shrink-0 ring-2 ring-amber-500/25 border border-slate-700/60"
-                            loading="lazy"
-                        >
+                        <div class="review-avatar" aria-hidden="true">H</div>
                         <div>
-                            <p class="font-semibold text-sm text-white">Youssef Benali</p>
-                            <p class="text-slate-500 text-xs mt-0.5" data-i18n="testimonial1.location">Meknès · Mai 2026</p>
+                            <p class="review-author-name">H Maan</p>
+                            <p class="review-author-meta" data-i18n="testimonial1.location">Publié sur Google Maps • il y a 1 mois</p>
                         </div>
                     </footer>
                 </article>
 
-                <article class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
-                    <p class="stars text-sm mb-4" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                    <blockquote class="text-slate-300 text-sm leading-relaxed flex-1" data-i18n="testimonial2.text">
-                        « Location pour un week-end à Fès — tarif transparent, aucune mauvaise surprise. La Dacia Logan parfaite pour la médina et les routes alentour. Accueil chaleureux et professionnel. »
+                <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
+                    <div class="review-card-header">
+                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" aria-label="Google Maps">
+                            <span class="google-maps-badge__icons" aria-hidden="true">
+                                <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                                <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
+                            </span>
+                            <span>Google Maps</span>
+                        </span>
+                    </div>
+                    <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial2.text">
+                        Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.
                     </blockquote>
                     <footer class="mt-6 pt-5 border-t border-slate-800/80 flex items-center gap-3">
-                        <img
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces&auto=format&q=80"
-                            alt="Photo de Sophie Amrani"
-                            width="48"
-                            height="48"
-                            class="w-12 h-12 rounded-full object-cover shrink-0 ring-2 ring-amber-500/25 border border-slate-700/60"
-                            loading="lazy"
-                        >
+                        <div class="review-avatar" aria-hidden="true">M</div>
                         <div>
-                            <p class="font-semibold text-sm text-white">Sophie Amrani</p>
-                            <p class="text-slate-500 text-xs mt-0.5" data-i18n="testimonial2.location">Fès · Avril 2026</p>
+                            <p class="review-author-name">Mohamed Chantoufi</p>
+                            <p class="review-author-meta" data-i18n="testimonial2.location">Publié sur Google Maps • il y a 3 semaines</p>
                         </div>
                     </footer>
                 </article>
 
-                <article class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
-                    <p class="stars text-sm mb-4" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                    <blockquote class="text-slate-300 text-sm leading-relaxed flex-1" data-i18n="testimonial3.text">
-                        « Atterrissage à Fès-Saïss : la voiture m'attendait devant le terminal. Livraison gratuite, formalités rapides. Le T-Roc était un vrai plaisir pour explorer le Rif. Top ! »
+                <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
+                    <div class="review-card-header">
+                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" aria-label="Google Maps">
+                            <span class="google-maps-badge__icons" aria-hidden="true">
+                                <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                                <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
+                            </span>
+                            <span>Google Maps</span>
+                        </span>
+                    </div>
+                    <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial3.text">
+                        I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.
                     </blockquote>
                     <footer class="mt-6 pt-5 border-t border-slate-800/80 flex items-center gap-3">
-                        <img
-                            src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=faces&auto=format&q=80"
-                            alt="Photo de Marc Lefèvre"
-                            width="48"
-                            height="48"
-                            class="w-12 h-12 rounded-full object-cover shrink-0 ring-2 ring-amber-500/25 border border-slate-700/60"
-                            loading="lazy"
-                        >
+                        <div class="review-avatar" aria-hidden="true">R</div>
                         <div>
-                            <p class="font-semibold text-sm text-white">Marc Lefèvre</p>
-                            <p class="text-slate-500 text-xs mt-0.5" data-i18n="testimonial3.location">Aéroport Fès-Saïss · Mars 2026</p>
+                            <p class="review-author-name">Riad Hassani</p>
+                            <p class="review-author-meta" data-i18n="testimonial3.location">Publié sur Google Maps • il y a 1 mois</p>
                         </div>
                     </footer>
                 </article>
+            </div>
+
+            <div class="testimonials-footer">
+                <a href="https://www.google.com/maps/place/L.THREE.RENTCAR/@34.0420844,-5.0092698,17z/data=!4m6!3m5!1s0xd9f8b70313eeb9b:0x7fd2d83f5dacd21b!8m2!3d34.0420844!4d-5.0092698!16s%2Fg%2F11yn1h8rty" target="_blank" rel="noopener noreferrer" class="testimonials-footer-link" data-i18n="testimonials.footer">Voir tous les 25 avis sur Google Maps →</a>
             </div>
         </div>
     </section>
@@ -853,7 +1054,7 @@
                         <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
                     <p class="faq-answer" data-i18n-html="faq.a1">
-                        Remplissez le formulaire de réservation en haut de page ou contactez-nous directement sur WhatsApp au <strong class="text-slate-300">+212 668 744 661</strong>. Indiquez vos dates, le lieu de prise en charge et le véhicule souhaité — nous vous confirmons la disponibilité en quelques minutes, sans engagement.
+                        Remplissez le formulaire de réservation en haut de page ou contactez-nous directement sur WhatsApp au <strong class="text-slate-300">+212 668 336 781</strong>. Indiquez vos dates, le lieu de prise en charge et le véhicule souhaité — nous vous confirmons la disponibilité en quelques minutes, sans engagement.
                     </p>
                 </details>
 
@@ -873,7 +1074,7 @@
                         <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </summary>
                     <p class="faq-answer" data-i18n-html="faq.a3">
-                        Oui ! Nous assurons la <strong class="text-slate-300">livraison gratuite</strong> à l'<strong class="text-slate-300">aéroport Fès-Saïss</strong>, ainsi qu'en centre-ville de Fès et Meknès. Précisez votre numéro de vol lors de la réservation — votre véhicule vous attendra à votre arrivée.
+                        Oui ! Nous assurons la <strong class="text-slate-300">livraison gratuite</strong> à l'<strong class="text-slate-300">aéroport Fès-Saïss</strong>, ainsi qu'en centre-ville de Fès. Précisez votre numéro de vol lors de la réservation — votre véhicule vous attendra à votre arrivée.
                     </p>
                 </details>
 
@@ -898,7 +1099,7 @@
                     <span class="w-6 h-px bg-amber-500"></span>
                     <span data-i18n="features.eyebrow">Nos services</span>
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black mt-3" data-i18n="features.title">Pourquoi Auto Rent ?</h2>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3" data-i18n="features.title">Pourquoi L.THREE RENTCAR ?</h2>
                 <p class="text-slate-400 mt-3" data-i18n="features.desc">Une expérience premium, pensée pour le Maroc</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -934,15 +1135,58 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA / Contact -->
     <section id="contact" class="py-20 px-4 sm:px-6">
         <div class="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 text-center">
             <h2 class="text-3xl sm:text-4xl font-black" data-i18n="cta.title">Prêt à partir ?</h2>
             <p class="text-slate-400 mt-4 max-w-md mx-auto" data-i18n="cta.desc">Contactez-nous sur WhatsApp et recevez une confirmation en moins d'une minute.</p>
-            <a href="https://wa.me/212668744661?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20Mekn%C3%A8s%20ou%20F%C3%A8s." class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl mt-8 text-base">
+            <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl mt-8 text-base">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
-                +212 668 744 661
+                <span data-i18n="cta.whatsapp_btn">WhatsApp · +212 668 336 781</span>
             </a>
+
+            <div class="contact-info mt-10 pt-10 border-t border-slate-800/60">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+                    <div class="contact-info-item">
+                        <svg class="contact-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div class="min-w-0">
+                            <p class="footer-detail-label" data-i18n="footer.address_label">Adresse</p>
+                            <p class="footer-detail-value" data-i18n="footer.address">Étage 3, Bureau 21, Avenue Imam Ali, Fès 30050, Morocco</p>
+                            <a href="https://www.google.com/maps/place/L.THREE.RENTCAR/@34.0420844,-5.0092698,17z/data=!4m6!3m5!1s0xd9f8b70313eeb9b:0x7fd2d83f5dacd21b!8m2!3d34.0420844!4d-5.0092698!16s%2Fg%2F11yn1h8rty" target="_blank" rel="noopener noreferrer" class="maps-link-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
+                                <span data-i18n="contact.maps_btn">Voir sur Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg class="contact-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <div class="min-w-0">
+                            <p class="footer-detail-label" data-i18n="footer.email_label">Email</p>
+                            <p class="footer-detail-value">
+                                <a href="mailto:barakathamid5@gmail.com">barakathamid5@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg class="contact-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <div class="min-w-0">
+                            <p class="footer-detail-label" data-i18n="footer.phone_label">Téléphone</p>
+                            <p class="footer-detail-value">
+                                <a href="tel:+212668336781">+212 668 336 781</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg class="contact-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div class="min-w-0">
+                            <p class="footer-detail-label" data-i18n="hours.title">Horaires</p>
+                            <p class="footer-detail-value">
+                                <a href="#business-hours" class="contact-hours-link" data-i18n="contact.hours_link">Consulter nos horaires détaillés</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -952,13 +1196,13 @@
             <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2" data-i18n="social.eyebrow">Restez connectés</p>
             <h2 class="text-xl sm:text-2xl font-black text-white mb-8" data-i18n="social.title">Suivez-nous</h2>
             <div class="flex items-center justify-center gap-5 sm:gap-6">
-                <a href="https://instagram.com/autorent_meknes" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
-                <a href="https://facebook.com/autorent_meknes" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
-                <a href="https://wa.me/212668744661" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                <a href="https://wa.me/212668336781" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                 </a>
             </div>
@@ -970,14 +1214,18 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-start mb-10">
                 <div class="text-center md:text-start">
-                    <p class="text-lg font-black text-white">AUTO<span class="text-amber-500">RENT</span></p>
-                    <p class="text-slate-500 text-sm mt-2" data-i18n="footer.location">Meknès & Fès · Maroc 🇲🇦</p>
+                    <p class="text-lg font-black text-white">L.THREE <span class="text-amber-500">RENTCAR</span></p>
+                    <p class="text-slate-500 text-sm mt-2" data-i18n="footer.location">Fès, Maroc 🇲🇦</p>
                     <div class="mt-4 space-y-4 text-sm flex flex-col items-center md:items-start w-full">
                         <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-start justify-center md:justify-start gap-2 md:gap-3 w-auto max-w-full">
                             <svg class="w-[18px] h-[18px] shrink-0 text-amber-500 md:mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             <div class="w-auto max-w-full md:min-w-0">
                                 <p class="footer-detail-label" data-i18n="footer.address_label">Adresse</p>
-                                <p class="footer-detail-value" data-i18n="footer.address">Avenue Hassan II, Meknès, Quartier Hamria — Maroc</p>
+                                <p class="footer-detail-value" data-i18n="footer.address">Étage 3, Bureau 21, Avenue Imam Ali, Fès 30050, Morocco</p>
+                                <a href="https://www.google.com/maps/place/L.THREE.RENTCAR/@34.0420844,-5.0092698,17z/data=!4m6!3m5!1s0xd9f8b70313eeb9b:0x7fd2d83f5dacd21b!8m2!3d34.0420844!4d-5.0092698!16s%2Fg%2F11yn1h8rty" target="_blank" rel="noopener noreferrer" class="maps-link-btn">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
+                                    <span data-i18n="contact.maps_btn">Voir sur Google Maps</span>
+                                </a>
                             </div>
                         </div>
                         <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-start justify-center md:justify-start gap-2 md:gap-3 w-auto max-w-full">
@@ -985,15 +1233,17 @@
                             <div class="w-auto max-w-full md:min-w-0">
                                 <p class="footer-detail-label" data-i18n="footer.email_label">Email</p>
                                 <p class="footer-detail-value">
-                                    <a href="mailto:contact@autorentmeknes.ma" data-i18n="footer.email">contact@autorentmeknes.ma</a>
+                                    <a href="mailto:barakathamid5@gmail.com">barakathamid5@gmail.com</a>
                                 </p>
                             </div>
                         </div>
                         <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-start justify-center md:justify-start gap-2 md:gap-3 w-auto max-w-full">
                             <svg class="w-[18px] h-[18px] shrink-0 text-amber-500 md:mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             <div class="w-auto max-w-full md:min-w-0">
-                                <div class="footer-detail-label">TELEPHONE</div>
-                                <a href="tel:+212668744661" class="footer-detail-value">+212 668744661</a>
+                                <p class="footer-detail-label" data-i18n="footer.phone_label">Téléphone</p>
+                                <p class="footer-detail-value">
+                                    <a href="tel:+212668336781">+212 668 336 781</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1008,74 +1258,79 @@
                     </div>
                     <div id="hours-status" class="hours-status hours-status--open" role="status">
                         <span class="hours-status-dot" aria-hidden="true"></span>
-                        <span id="hours-status-text" data-i18n="hours.status_open">Actuellement ouvert</span>
+                        <span class="hours-status-copy">
+                            <span id="hours-status-text">🟢 Ouvert maintenant</span>
+                            <span id="hours-status-detail" class="hours-status-detail">Ferme à 19:00</span>
+                        </span>
                     </div>
                     <div class="hours-schedule">
                         <div class="hours-row" data-day="1">
                             <span class="hours-row-day" data-i18n="hours.mon">Lundi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 19:00</span>
                         </div>
                         <div class="hours-row" data-day="2">
                             <span class="hours-row-day" data-i18n="hours.tue">Mardi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 19:00</span>
                         </div>
                         <div class="hours-row" data-day="3">
                             <span class="hours-row-day" data-i18n="hours.wed">Mercredi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 19:00</span>
                         </div>
                         <div class="hours-row" data-day="4">
                             <span class="hours-row-day" data-i18n="hours.thu">Jeudi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 19:00</span>
                         </div>
                         <div class="hours-row" data-day="5">
                             <span class="hours-row-day" data-i18n="hours.fri">Vendredi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 19:00</span>
                         </div>
                         <div class="hours-row" data-day="6">
                             <span class="hours-row-day" data-i18n="hours.sat">Samedi</span>
-                            <span class="hours-row-time" data-i18n="hours.time_weekday">09:00 - 21:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_saturday">09:00 - 18:00</span>
                         </div>
                         <div class="hours-row" data-day="0">
                             <span class="hours-row-day" data-i18n="hours.sun">Dimanche</span>
-                            <span class="hours-row-time" data-i18n="hours.time_sunday">09:00 - 18:00</span>
+                            <span class="hours-row-time" data-i18n="hours.time_sunday">09:00 - 12:00</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="text-center md:text-end text-sm text-slate-500">
                     <p class="text-amber-500 font-semibold mb-1" data-i18n="hours.support_note">Assistance WhatsApp 24/7</p>
-                    <p>+212 668 744 661</p>
+                    <p class="footer-detail-value">
+                        <a href="tel:+212668336781">+212 668 336 781</a>
+                    </p>
                 </div>
             </div>
 
             <div class="border-t border-slate-800/60 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-slate-500 text-center sm:text-start">
-                <p>© <script>document.write(new Date().getFullYear());</script> Auto Rent — <span data-i18n="footer.rights">Tous droits réservés</span></p>
+                <p>© <script>document.write(new Date().getFullYear());</script> L.THREE RENTCAR — <span data-i18n="footer.rights">Tous droits réservés</span></p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp floating -->
-    <a href="https://wa.me/212668744661" class="wa-float wa-btn fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center z-50 hover:scale-110" aria-label="WhatsApp">
+    <a href="https://wa.me/212668336781" class="wa-float wa-btn fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center z-50 hover:scale-110" aria-label="WhatsApp">
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
     </a>
 
     <script>
-        const WA = '212668744661';
+        const WA = '212668336781';
 
         const translations = {
             fr: {
-                'meta.title': 'Auto Rent | Location Premium — Meknès & Fès',
-                'meta.description': 'Auto Rent — Location de voitures premium à Meknès et Fès. Réservation instantanée, livraison aéroport, flotte récente.',
-                'nav.cities': 'Meknès · Fès',
+                'meta.title': 'L.THREE RENTCAR | Location Premium — Fès',
+                'meta.description': 'L.THREE RENTCAR — Location de voitures premium à Fès. Réservation instantanée, livraison aéroport, flotte récente.',
+                'nav.cities': 'Fès · Centre-ville',
                 'nav.book': 'Réserver',
                 'nav.fleet': 'Notre flotte',
                 'nav.features': 'Services',
                 'nav.contact': 'Contact',
                 'nav.whatsapp': 'WhatsApp',
                 'hero.eyebrow': 'LOCATION PREMIUM • MAROC',
-                'hero.title1': 'Explorez le Maroc',
-                'hero.title2': 'en toute élégance',
-                'hero.desc': 'Meknès, Fès et au-delà — flotte récente, tarifs transparents et livraison gratuite à l\'aéroport. Réservez en quelques clics.',
+                'hero.title1': 'Location de voiture à Fès',
+                'hero.title2': 'en toute confiance',
+                'hero.desc': 'Des véhicules récents, des tarifs transparents et une réservation rapide via WhatsApp. L.THREE RENTCAR vous accompagne à Fès avec une assistance 24h/24 et un service de livraison à l\'aéroport Fès-Saïss.',
                 'hero.stat1': 'Clients satisfaits',
                 'hero.stat2': 'Assistance',
                 'hero.stat3': 'Note moyenne',
@@ -1086,10 +1341,9 @@
                 'form.date_end': 'Date de fin',
                 'form.search': 'Rechercher',
                 'form.confirm': 'Confirmation instantanée et sécurisée',
-                'opt.meknes': 'Meknès — Centre-ville',
-                'opt.fes': 'Fès — Centre-ville',
+                'opt.fes': 'Fès Centre-ville',
                 'opt.airport': 'Fès — Aéroport Saïss',
-                'opt.gare': 'Meknès — Gare ONCF',
+                'opt.gare': 'Fès — Gare ONCF',
                 'fleet.eyebrow': 'Notre flotte',
                 'fleet.title': 'Véhicules disponibles',
                 'fleet.desc': 'Entretenus avec soin, prêts pour vos routes marocaines',
@@ -1103,27 +1357,29 @@
                 'fleet.spec_troc': '⛽ Diesel • ⚙️ Automatique • 👤 5 Places',
                 'fleet.book': 'Réserver',
                 'testimonials.eyebrow': '✨ Avis de nos clients',
-                'testimonials.title': 'Ils nous font confiance',
-                'testimonials.desc': 'Des centaines de voyageurs satisfaits à Meknès, Fès et à l\'aéroport',
-                'testimonial1.text': '« Service impeccable à Meknès. La Clio était propre, récente et livrée à mon hôtel en moins d\'une heure. Équipe réactive sur WhatsApp, je recommande sans hésiter. »',
-                'testimonial1.location': 'Meknès · Mai 2026',
-                'testimonial2.text': '« Location pour un week-end à Fès — tarif transparent, aucune mauvaise surprise. La Dacia Logan parfaite pour la médina et les routes alentour. Accueil chaleureux et professionnel. »',
-                'testimonial2.location': 'Fès · Avril 2026',
-                'testimonial3.text': '« Atterrissage à Fès-Saïss : la voiture m\'attendait devant le terminal. Livraison gratuite, formalités rapides. Le T-Roc était un vrai plaisir pour explorer le Rif. Top ! »',
-                'testimonial3.location': 'Aéroport Fès-Saïss · Mars 2026',
+                'testimonials.title': 'Ce que disent nos clients sur Google Maps',
+                'testimonials.desc': '25 avis authentiques publiés sur Google Maps',
+                'testimonials.link': 'Voir les 25 avis sur Google Maps ↗',
+                'testimonials.footer': 'Voir tous les 25 avis sur Google Maps →',
+                'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
+                'testimonial1.location': 'Publié sur Google Maps • il y a 1 mois',
+                'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
+                'testimonial2.location': 'Publié sur Google Maps • il y a 3 semaines',
+                'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
+                'testimonial3.location': 'Publié sur Google Maps • il y a 1 mois',
                 'faq.eyebrow': '🙋 Questions Fréquentes',
                 'faq.title': 'Tout ce qu\'il faut savoir',
                 'faq.desc': 'Réponses claires pour réserver en toute sérénité',
                 'faq.q1': 'Comment réserver une voiture ?',
-                'faq.a1': 'Remplissez le formulaire de réservation en haut de page ou contactez-nous directement sur WhatsApp au <strong class="text-slate-300">+212 668 744 661</strong>. Indiquez vos dates, le lieu de prise en charge et le véhicule souhaité — nous vous confirmons la disponibilité en quelques minutes, sans engagement.',
+                'faq.a1': 'Remplissez le formulaire de réservation en haut de page ou contactez-nous directement sur WhatsApp au <strong class="text-slate-300">+212 668 336 781</strong>. Indiquez vos dates, le lieu de prise en charge et le véhicule souhaité — nous vous confirmons la disponibilité en quelques minutes, sans engagement.',
                 'faq.q2': 'Quels sont les documents requis ?',
                 'faq.a2': 'Pour récupérer votre véhicule, munissez-vous d\'un <strong class="text-slate-300">permis de conduire valide</strong> (depuis au moins 1 an) et d\'une pièce d\'identité officielle : <strong class="text-slate-300">CIN marocaine</strong> ou <strong class="text-slate-300">passeport</strong> pour les visiteurs étrangers.',
                 'faq.q3': 'Proposez-vous la livraison à l\'aéroport ?',
-                'faq.a3': 'Oui ! Nous assurons la <strong class="text-slate-300">livraison gratuite</strong> à l\'<strong class="text-slate-300">aéroport Fès-Saïss</strong>, ainsi qu\'en centre-ville de Fès et Meknès. Précisez votre numéro de vol lors de la réservation — votre véhicule vous attendra à votre arrivée.',
+                'faq.a3': 'Oui ! Nous assurons la <strong class="text-slate-300">livraison gratuite</strong> à l\'<strong class="text-slate-300">aéroport Fès-Saïss</strong>, ainsi qu\'en centre-ville de Fès. Précisez votre numéro de vol lors de la réservation — votre véhicule vous attendra à votre arrivée.',
                 'faq.q4': 'Quels sont les modes de paiement acceptés ?',
                 'faq.a4': 'Le paiement s\'effectue <strong class="text-slate-300">à la livraison</strong> du véhicule. Nous acceptons les espèces (<strong class="text-slate-300">cash</strong>) et le paiement par carte via notre <strong class="text-slate-300">TPE mobile</strong>. Aucun prépaiement en ligne n\'est requis.',
                 'features.eyebrow': 'Nos services',
-                'features.title': 'Pourquoi Auto Rent ?',
+                'features.title': 'Pourquoi L.THREE RENTCAR ?',
                 'features.desc': 'Une expérience premium, pensée pour le Maroc',
                 'feat1.title': 'Livraison aéroport',
                 'feat1.desc': 'Prise en charge à Fès-Saïss ou en centre-ville',
@@ -1135,17 +1391,25 @@
                 'feat4.desc': 'Assistance WhatsApp à toute heure',
                 'cta.title': 'Prêt à partir ?',
                 'cta.desc': 'Contactez-nous sur WhatsApp et recevez une confirmation en moins d\'une minute.',
-                'footer.location': 'Meknès & Fès · Maroc 🇲🇦',
+                'cta.whatsapp_btn': 'WhatsApp · +212 668 336 781',
+                'contact.maps_btn': 'Voir sur Google Maps',
+                'contact.hours_link': 'Consulter nos horaires détaillés',
+                'footer.location': 'Fès, Maroc 🇲🇦',
                 'footer.address_label': 'Adresse',
-                'footer.address': 'Avenue Hassan II, Meknès, Quartier Hamria — Maroc',
+                'footer.address': 'Étage 3, Bureau 21, Avenue Imam Ali, Fès 30050, Morocco',
                 'footer.email_label': 'Email',
-                'footer.email': 'contact@autorentmeknes.ma',
+                'footer.phone_label': 'Téléphone',
+                'footer.email': 'barakathamid5@gmail.com',
                 'footer.rights': 'Tous droits réservés',
                 'social.eyebrow': 'Restez connectés',
                 'social.title': 'Suivez-nous',
                 'hours.title': 'Horaires',
-                'hours.status_open': 'Actuellement ouvert',
+                'hours.open_now': 'Ouvert maintenant',
                 'hours.status_closed': 'Fermé',
+                'hours.closes_at': 'Ferme à {time}',
+                'hours.opens_today': 'Ouvre aujourd\'hui à {time}',
+                'hours.opens_tomorrow': 'Ouvre demain à {time}',
+                'hours.opens_monday': 'Ouvre lundi à {time}',
                 'hours.mon': 'Lundi',
                 'hours.tue': 'Mardi',
                 'hours.wed': 'Mercredi',
@@ -1153,24 +1417,25 @@
                 'hours.fri': 'Vendredi',
                 'hours.sat': 'Samedi',
                 'hours.sun': 'Dimanche',
-                'hours.time_weekday': '09:00 - 21:00',
-                'hours.time_sunday': '09:00 - 18:00',
+                'hours.time_weekday': '09:00 - 19:00',
+                'hours.time_saturday': '09:00 - 18:00',
+                'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'Assistance WhatsApp 24/7',
                 'alert.date_invalid': 'La date de fin doit être après la date de début.'
             },
             en: {
-                'meta.title': 'Auto Rent | Premium Car Rental — Meknes & Fez',
-                'meta.description': 'Auto Rent — Premium car rental in Meknes and Fez, Morocco. Instant booking, airport delivery, modern fleet.',
-                'nav.cities': 'Meknes · Fez',
+                'meta.title': 'L.THREE RENTCAR | Premium Car Rental — Fez, Morocco',
+                'meta.description': 'L.THREE RENTCAR — Premium car rental in Fez, Morocco. Instant booking, airport delivery, modern fleet.',
+                'nav.cities': 'Fez · City centre',
                 'nav.book': 'Book',
                 'nav.fleet': 'Our Fleet',
                 'nav.features': 'Services',
                 'nav.contact': 'Contact',
                 'nav.whatsapp': 'WhatsApp',
                 'hero.eyebrow': 'PREMIUM RENTAL • MOROCCO',
-                'hero.title1': 'Explore Morocco',
-                'hero.title2': 'in True Elegance',
-                'hero.desc': 'Meknes, Fez and beyond — modern fleet, transparent pricing and free airport delivery. Book in just a few clicks.',
+                'hero.title1': 'Car rental in Fez',
+                'hero.title2': 'with full confidence',
+                'hero.desc': 'Recent vehicles, transparent rates and quick booking via WhatsApp. L.THREE RENTCAR supports you in Fez with 24/7 assistance and delivery to Fez-Saiss Airport.',
                 'hero.stat1': 'Happy clients',
                 'hero.stat2': 'Support',
                 'hero.stat3': 'Average rating',
@@ -1181,10 +1446,9 @@
                 'form.date_end': 'End date',
                 'form.search': 'Search',
                 'form.confirm': 'Instant secure confirmation',
-                'opt.meknes': 'Meknes — City centre',
-                'opt.fes': 'Fez — City centre',
+                'opt.fes': 'Fez Centre-ville',
                 'opt.airport': 'Fez — Saiss Airport',
-                'opt.gare': 'Meknes — ONCF Station',
+                'opt.gare': 'Fez — ONCF Station',
                 'fleet.eyebrow': 'Our fleet',
                 'fleet.title': 'Available vehicles',
                 'fleet.desc': 'Meticulously maintained, ready for Moroccan roads',
@@ -1198,27 +1462,29 @@
                 'fleet.spec_troc': '⛽ Diesel • ⚙️ Automatic • 👤 5 Seats',
                 'fleet.book': 'Book now',
                 'testimonials.eyebrow': '✨ Customer reviews',
-                'testimonials.title': 'Trusted by travellers',
-                'testimonials.desc': 'Hundreds of satisfied customers in Meknes, Fez and at the airport',
-                'testimonial1.text': '"Impeccable service in Meknes. The Clio was clean, recent and delivered to my hotel in under an hour. Responsive WhatsApp team — highly recommended."',
-                'testimonial1.location': 'Meknes · May 2026',
-                'testimonial2.text': '"Weekend rental in Fez — transparent pricing, no surprises. The Dacia Logan was perfect for the medina and surrounding roads. Warm, professional welcome."',
-                'testimonial2.location': 'Fez · April 2026',
-                'testimonial3.text': '"Landed at Fez-Saiss: the car was waiting at the terminal. Free delivery, quick paperwork. The T-Roc was a joy for exploring the Rif. Excellent!"',
-                'testimonial3.location': 'Fez-Saiss Airport · March 2026',
+                'testimonials.title': 'What our clients say on Google Maps',
+                'testimonials.desc': '25 authentic reviews published on Google Maps',
+                'testimonials.link': 'View all 25 reviews on Google Maps ↗',
+                'testimonials.footer': 'View all 25 reviews on Google Maps →',
+                'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
+                'testimonial1.location': 'Published on Google Maps • 1 month ago',
+                'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
+                'testimonial2.location': 'Published on Google Maps • 3 weeks ago',
+                'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
+                'testimonial3.location': 'Published on Google Maps • 1 month ago',
                 'faq.eyebrow': '🙋 Frequently Asked Questions',
                 'faq.title': 'Everything you need to know',
                 'faq.desc': 'Clear answers to book with confidence',
                 'faq.q1': 'How do I book a car?',
-                'faq.a1': 'Fill in the booking form at the top of the page or contact us directly on WhatsApp at <strong class="text-slate-300">+212 668 744 661</strong>. Share your dates, pick-up location and preferred vehicle — we confirm availability within minutes, with no obligation.',
+                'faq.a1': 'Fill in the booking form at the top of the page or contact us directly on WhatsApp at <strong class="text-slate-300">+212 668 336 781</strong>. Share your dates, pick-up location and preferred vehicle — we confirm availability within minutes, with no obligation.',
                 'faq.q2': 'What documents are required?',
                 'faq.a2': 'To collect your vehicle, bring a <strong class="text-slate-300">valid driving licence</strong> (held for at least 1 year) and official ID: <strong class="text-slate-300">Moroccan CIN</strong> or <strong class="text-slate-300">passport</strong> for foreign visitors.',
                 'faq.q3': 'Do you offer airport delivery?',
-                'faq.a3': 'Yes! We provide <strong class="text-slate-300">free delivery</strong> to <strong class="text-slate-300">Fez-Saiss Airport</strong>, as well as downtown Fez and Meknes. Include your flight number when booking — your car will be waiting on arrival.',
+                'faq.a3': 'Yes! We provide <strong class="text-slate-300">free delivery</strong> to <strong class="text-slate-300">Fez-Saiss Airport</strong>, as well as downtown Fez. Include your flight number when booking — your car will be waiting on arrival.',
                 'faq.q4': 'What payment methods do you accept?',
                 'faq.a4': 'Payment is made <strong class="text-slate-300">on delivery</strong>. We accept <strong class="text-slate-300">cash</strong> and card payment via our <strong class="text-slate-300">mobile POS</strong>. No online prepayment required.',
                 'features.eyebrow': 'Our services',
-                'features.title': 'Why Auto Rent?',
+                'features.title': 'Why L.THREE RENTCAR?',
                 'features.desc': 'A premium experience, designed for Morocco',
                 'feat1.title': 'Airport delivery',
                 'feat1.desc': 'Pick-up at Fez-Saiss or city centre',
@@ -1230,17 +1496,25 @@
                 'feat4.desc': 'WhatsApp assistance anytime',
                 'cta.title': 'Ready to go?',
                 'cta.desc': 'Contact us on WhatsApp and get confirmation in under a minute.',
-                'footer.location': 'Meknes & Fez · Morocco 🇲🇦',
+                'cta.whatsapp_btn': 'WhatsApp · +212 668 336 781',
+                'contact.maps_btn': 'View on Google Maps',
+                'contact.hours_link': 'View detailed business hours',
+                'footer.location': 'Fez, Morocco 🇲🇦',
                 'footer.address_label': 'Address',
-                'footer.address': 'Avenue Hassan II, Meknes, Hamria District — Morocco',
+                'footer.address': 'Floor 3, Office 21, Avenue Imam Ali, Fez 30050, Morocco',
                 'footer.email_label': 'Email',
-                'footer.email': 'contact@autorentmeknes.ma',
+                'footer.phone_label': 'Phone',
+                'footer.email': 'barakathamid5@gmail.com',
                 'footer.rights': 'All rights reserved',
                 'social.eyebrow': 'Stay connected',
                 'social.title': 'Follow us',
                 'hours.title': 'Business Hours',
-                'hours.status_open': 'Currently open',
+                'hours.open_now': 'Open now',
                 'hours.status_closed': 'Closed',
+                'hours.closes_at': 'Closes at {time}',
+                'hours.opens_today': 'Opens today at {time}',
+                'hours.opens_tomorrow': 'Opens tomorrow at {time}',
+                'hours.opens_monday': 'Opens Monday at {time}',
                 'hours.mon': 'Monday',
                 'hours.tue': 'Tuesday',
                 'hours.wed': 'Wednesday',
@@ -1248,24 +1522,25 @@
                 'hours.fri': 'Friday',
                 'hours.sat': 'Saturday',
                 'hours.sun': 'Sunday',
-                'hours.time_weekday': '09:00 - 21:00',
-                'hours.time_sunday': '09:00 - 18:00',
+                'hours.time_weekday': '09:00 - 19:00',
+                'hours.time_saturday': '09:00 - 18:00',
+                'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'WhatsApp support 24/7',
                 'alert.date_invalid': 'End date must be after start date.'
             },
             ar: {
-                'meta.title': 'أوتو رينت | تأجير سيارات فاخرة — مكناس وفاس',
-                'meta.description': 'أوتو رينت — تأجير سيارات فاخرة في مكناس وفاس. حجز فوري، توصيل للمطار، أسطول حديث.',
-                'nav.cities': 'مكناس · فاس',
+                'meta.title': 'L.THREE RENTCAR | تأجير سيارات فاخرة — فاس',
+                'meta.description': 'L.THREE RENTCAR — تأجير سيارات فاخرة في فاس. حجز فوري، توصيل للمطار، أسطول حديث.',
+                'nav.cities': 'فاس · وسط المدينة',
                 'nav.book': 'احجز',
                 'nav.fleet': 'أسطولنا',
                 'nav.features': 'خدماتنا',
                 'nav.contact': 'اتصل',
                 'nav.whatsapp': 'واتساب',
                 'hero.eyebrow': 'تأجير فاخر • المغرب',
-                'hero.title1': 'استكشف المغرب',
-                'hero.title2': 'بكل فخامة',
-                'hero.desc': 'مكناس، فاس — أسطول حديث، أسعار شفافة وتوصيل مجاني للمطار. احجز في بضع نقرات.',
+                'hero.title1': 'تأجير سيارات في فاس',
+                'hero.title2': 'بكل ثقة',
+                'hero.desc': 'مركبات حديثة، أسعار شفافة وحجز سريع عبر واتساب. L.THREE RENTCAR يرافقكم في فاس بمساعدة على مدار 24 ساعة وخدمة توصيل إلى مطار فاس سايس.',
                 'hero.stat1': 'عملاء راضون',
                 'hero.stat2': 'مساعدة',
                 'hero.stat3': 'التقييم',
@@ -1276,10 +1551,9 @@
                 'form.date_end': 'تاريخ النهاية',
                 'form.search': 'بحث',
                 'form.confirm': 'تأكيد فوري وآمن',
-                'opt.meknes': 'مكناس — وسط المدينة',
-                'opt.fes': 'فاس — وسط المدينة',
+                'opt.fes': 'فاس وسط المدينة',
                 'opt.airport': 'فاس — مطار سايس',
-                'opt.gare': 'مكناس — محطة ONCF',
+                'opt.gare': 'فاس — محطة ONCF',
                 'fleet.eyebrow': 'أسطولنا',
                 'fleet.title': 'السيارات المتاحة',
                 'fleet.desc': 'صيانة دقيقة، جاهزة لطرق المغرب',
@@ -1293,27 +1567,29 @@
                 'fleet.spec_troc': '⛽ ديزل • ⚙️ أوتوماتيك • 👤 5 مقاعد',
                 'fleet.book': 'احجز',
                 'testimonials.eyebrow': '✨ آراء عملائنا',
-                'testimonials.title': 'يثقون بنا',
-                'testimonials.desc': 'مئات المسافرين الراضين في مكناس وفاس والمطار',
-                'testimonial1.text': '« خدمة ممتازة في مكناس. كانت Clio نظيفة وحديثة ووُصلت إلى فندقي في أقل من ساعة. فريق واتساب سريع الاستجابة، أنصح بشدة. »',
-                'testimonial1.location': 'مكناس · ماي 2026',
-                'testimonial2.text': '« تأجير لعطلة نهاية الأسبوع في فاس — سعر شفاف دون مفاجآت. Dacia Logan مثالية للمدينة القديمة والطرق المحيطة. استقبال دافئ ومحترف. »',
-                'testimonial2.location': 'فاس · أبريل 2026',
-                'testimonial3.text': '« هبطت في مطار فاس سايس: السيارة كانت تنتظر أمام المحطة. توصيل مجاني، إجراءات سريعة. T-Roc متعة حقيقية لاستكشاف الريف. رائع! »',
-                'testimonial3.location': 'مطار فاس سايس · مارس 2026',
+                'testimonials.title': 'ما يقوله عملاؤنا على Google Maps',
+                'testimonials.desc': '25 مراجعة حقيقية منشورة على Google Maps',
+                'testimonials.link': 'عرض 25 مراجعة على Google Maps ↗',
+                'testimonials.footer': 'عرض جميع المراجعات الـ 25 على Google Maps →',
+                'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
+                'testimonial1.location': 'نُشر على Google Maps • منذ شهر',
+                'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
+                'testimonial2.location': 'نُشر على Google Maps • منذ 3 أسابيع',
+                'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
+                'testimonial3.location': 'نُشر على Google Maps • منذ شهر',
                 'faq.eyebrow': '🙋 الأسئلة الشائعة',
                 'faq.title': 'كل ما تحتاج معرفته',
                 'faq.desc': 'إجابات واضحة للحجز بثقة',
                 'faq.q1': 'كيف أحجز سيارة؟',
-                'faq.a1': 'املأ نموذج الحجز أعلى الصفحة أو تواصل معنا مباشرة على واتساب <strong class="text-slate-300">+212 668 744 661</strong>. حدّد التواريخ ومكان الاستلام والسيارة المطلوبة — نؤكد التوفر خلال دقائق دون التزام.',
+                'faq.a1': 'املأ نموذج الحجز أعلى الصفحة أو تواصل معنا مباشرة على واتساب <strong class="text-slate-300">+212 668 336 781</strong>. حدّد التواريخ ومكان الاستلام والسيارة المطلوبة — نؤكد التوفر خلال دقائق دون التزام.',
                 'faq.q2': 'ما الوثائق المطلوبة؟',
                 'faq.a2': 'لاستلام سيارتك، أحضر <strong class="text-slate-300">رخصة قيادة سارية</strong> (منذ سنة على الأقل) ووثيقة هوية رسمية: <strong class="text-slate-300">البطاقة الوطنية</strong> أو <strong class="text-slate-300">جواز السفر</strong> للزوار الأجانب.',
                 'faq.q3': 'هل تقدمون التوصيل للمطار؟',
-                'faq.a3': 'نعم! نوفر <strong class="text-slate-300">توصيلاً مجانياً</strong> إلى <strong class="text-slate-300">مطار فاس سايس</strong>، وكذلك وسط فاس ومكناس. أذكر رقم رحلتك عند الحجز — ستنتظرك سيارتك عند الوصول.',
+                'faq.a3': 'نعم! نوفر <strong class="text-slate-300">توصيلاً مجانياً</strong> إلى <strong class="text-slate-300">مطار فاس سايس</strong>، وكذلك وسط مدينة فاس. أذكر رقم رحلتك عند الحجز — ستنتظرك سيارتك عند الوصول.',
                 'faq.q4': 'ما طرق الدفع المقبولة؟',
                 'faq.a4': 'الدفع يتم <strong class="text-slate-300">عند التسليم</strong>. نقبل النقد (<strong class="text-slate-300">cash</strong>) والبطاقة عبر <strong class="text-slate-300">جهاز الدفع المحمول</strong>. لا يلزم دفع مسبق عبر الإنترنت.',
                 'features.eyebrow': 'خدماتنا',
-                'features.title': 'لماذا أوتو رينت؟',
+                'features.title': 'لماذا L.THREE RENTCAR؟',
                 'features.desc': 'تجربة فاخرة، مصممة للمغرب',
                 'feat1.title': 'توصيل المطار',
                 'feat1.desc': 'استلام في مطار فاس سايس أو وسط المدينة',
@@ -1325,17 +1601,25 @@
                 'feat4.desc': 'مساعدة واتساب على مدار الساعة',
                 'cta.title': 'مستعد للانطلاق؟',
                 'cta.desc': 'تواصل معنا على واتساب واحصل على تأكيد في أقل من دقيقة.',
-                'footer.location': 'مكناس وفاس · المغرب 🇲🇦',
+                'cta.whatsapp_btn': 'واتساب · +212 668 336 781',
+                'contact.maps_btn': 'عرض على Google Maps',
+                'contact.hours_link': 'عرض ساعات العمل التفصيلية',
+                'footer.location': 'فاس، المغرب 🇲🇦',
                 'footer.address_label': 'العنوان',
-                'footer.address': 'شارع الحسن الثاني، مكناس، حي الحمرية — المغرب',
+                'footer.address': 'الطابق 3، مكتب 21، شارع الإمام علي، فاس 30050، المغرب',
                 'footer.email_label': 'البريد الإلكتروني',
-                'footer.email': 'contact@autorentmeknes.ma',
+                'footer.phone_label': 'الهاتف',
+                'footer.email': 'barakathamid5@gmail.com',
                 'footer.rights': 'جميع الحقوق محفوظة',
                 'social.eyebrow': 'ابقَ على تواصل',
                 'social.title': 'تابعنا',
                 'hours.title': 'أوقات العمل',
-                'hours.status_open': 'مفتوح الآن',
+                'hours.open_now': 'مفتوح الآن',
                 'hours.status_closed': 'مغلق',
+                'hours.closes_at': 'يغلق عند {time}',
+                'hours.opens_today': 'يفتح اليوم عند {time}',
+                'hours.opens_tomorrow': 'يفتح غداً عند {time}',
+                'hours.opens_monday': 'يفتح يوم الإثنين عند {time}',
                 'hours.mon': 'الإثنين',
                 'hours.tue': 'الثلاثاء',
                 'hours.wed': 'الأربعاء',
@@ -1343,8 +1627,9 @@
                 'hours.fri': 'الجمعة',
                 'hours.sat': 'السبت',
                 'hours.sun': 'الأحد',
-                'hours.time_weekday': '09:00 - 21:00',
-                'hours.time_sunday': '09:00 - 18:00',
+                'hours.time_weekday': '09:00 - 19:00',
+                'hours.time_saturday': '09:00 - 18:00',
+                'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'مساعدة واتساب 24/7',
                 'alert.date_invalid': 'يجب أن يكون تاريخ النهاية بعد تاريخ البداية.'
             }
@@ -1387,24 +1672,68 @@
             updateBusinessHoursStatus();
         }
 
+        const BUSINESS_HOURS = [
+            { open: 540, close: 720 },   // Sunday 09:00–12:00
+            { open: 540, close: 1140 },  // Monday 09:00–19:00
+            { open: 540, close: 1140 },
+            { open: 540, close: 1140 },
+            { open: 540, close: 1140 },
+            { open: 540, close: 1140 },
+            { open: 540, close: 1080 }   // Saturday 09:00–18:00
+        ];
+
+        function formatHourMinutes(minutes) {
+            const h = Math.floor(minutes / 60);
+            const m = minutes % 60;
+            return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
+        }
+
+        function getNowMinutes(now) {
+            return now.getHours() * 60 + now.getMinutes();
+        }
+
         function isAgencyOpen(now) {
+            const schedule = BUSINESS_HOURS[now.getDay()];
+            const minutes = getNowMinutes(now);
+            return minutes >= schedule.open && minutes < schedule.close;
+        }
+
+        function getClosedDetail(now) {
             const day = now.getDay();
-            const minutes = now.getHours() * 60 + now.getMinutes();
-            const openMin = 9 * 60;
-            const closeMin = day === 0 ? 18 * 60 : 21 * 60;
-            return minutes >= openMin && minutes < closeMin;
+            const minutes = getNowMinutes(now);
+            const today = BUSINESS_HOURS[day];
+
+            if (minutes < today.open) {
+                return t('hours.opens_today').replace('{time}', formatHourMinutes(today.open));
+            }
+
+            if (day === 0) {
+                return t('hours.opens_monday').replace('{time}', formatHourMinutes(BUSINESS_HOURS[1].open));
+            }
+
+            const tomorrow = (day + 1) % 7;
+            return t('hours.opens_tomorrow').replace('{time}', formatHourMinutes(BUSINESS_HOURS[tomorrow].open));
         }
 
         function updateBusinessHoursStatus() {
-            const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Africa/Casablanca' }));
+            const now = new Date();
             const open = isAgencyOpen(now);
             const statusEl = document.getElementById('hours-status');
             const statusText = document.getElementById('hours-status-text');
-            if (!statusEl || !statusText) return;
+            const statusDetail = document.getElementById('hours-status-detail');
+            if (!statusEl || !statusText || !statusDetail) return;
 
             statusEl.classList.toggle('hours-status--open', open);
             statusEl.classList.toggle('hours-status--closed', !open);
-            statusText.textContent = t(open ? 'hours.status_open' : 'hours.status_closed');
+
+            if (open) {
+                const closeTime = formatHourMinutes(BUSINESS_HOURS[now.getDay()].close);
+                statusText.textContent = '🟢 ' + t('hours.open_now');
+                statusDetail.textContent = t('hours.closes_at').replace('{time}', closeTime);
+            } else {
+                statusText.textContent = '🔴 ' + t('hours.status_closed');
+                statusDetail.textContent = getClosedDetail(now);
+            }
 
             document.querySelectorAll('.hours-row').forEach(function (row) {
                 row.classList.toggle('hours-row--today', parseInt(row.dataset.day, 10) === now.getDay());
@@ -1449,21 +1778,81 @@
             if (dateFin.value && dateFin.value < dateDebut.value) dateFin.value = dateDebut.value;
         });
 
-        function formatDate(d) {
-            const locale = currentLang === 'ar' ? 'ar-MA' : currentLang === 'en' ? 'en-GB' : 'fr-FR';
-            return new Date(d + 'T00:00:00').toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+        function formatDateFr(d) {
+            return new Date(d + 'T00:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
         }
 
-        function buildWhatsAppMessage(lieuKey, debut, fin) {
-            const lieu = t('opt.' + lieuKey);
-            if (currentLang === 'en') {
-                return 'Hello, I would like to rent a car.\n\n📍 Location: ' + lieu + '\n📅 From: ' + formatDate(debut) + '\n📅 To: ' + formatDate(fin) + '\n\nPlease confirm availability.';
-            }
-            if (currentLang === 'ar') {
-                return 'مرحباً، أود استئجار سيارة.\n\n📍 المكان: ' + lieu + '\n📅 من: ' + formatDate(debut) + '\n📅 إلى: ' + formatDate(fin) + '\n\nيرجى تأكيد التوفر.';
-            }
-            return 'Bonjour, je souhaite louer une voiture.\n\n📍 Lieu : ' + lieu + '\n📅 Du : ' + formatDate(debut) + '\n📅 Au : ' + formatDate(fin) + '\n\nMerci de me confirmer la disponibilité.';
+        function getPickupLocationFr(lieuKey) {
+            if (!lieuKey) return '';
+            return translations.fr['opt.' + lieuKey] || '';
         }
+
+        function getRentalDays(debut, fin) {
+            if (!debut || !fin || fin < debut) return null;
+            const start = new Date(debut + 'T00:00:00');
+            const end = new Date(fin + 'T00:00:00');
+            const diff = Math.round((end - start) / 86400000);
+            return Math.max(1, diff + 1);
+        }
+
+        function buildWhatsAppMessage(options) {
+            const carName = (options.carName || '').trim();
+            const pickupLocation = (options.pickupLocation || '').trim();
+            const startDate = options.startDate || '';
+            const endDate = options.endDate || '';
+            const days = startDate && endDate ? getRentalDays(startDate, endDate) : null;
+
+            const lines = [
+                '---',
+                '',
+                'Bonjour 👋',
+                '',
+                'Je souhaite réserver le véhicule suivant :',
+                ''
+            ];
+
+            if (carName) lines.push('🚗 Véhicule : ' + carName);
+            if (pickupLocation) lines.push('📍 Lieu de prise en charge : ' + pickupLocation);
+            if (startDate) lines.push('📅 Date de début : ' + formatDateFr(startDate));
+            if (endDate) lines.push('📅 Date de retour : ' + formatDateFr(endDate));
+            if (days !== null) lines.push('🗓️ Durée : ' + days + ' jour(s)');
+
+            lines.push(
+                '',
+                'Merci de me confirmer la disponibilité ainsi que le prix total.',
+                '',
+                'Cordialement.',
+                '',
+                '---'
+            );
+
+            return lines.join('\n');
+        }
+
+        function openWhatsAppReservation(options) {
+            window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(buildWhatsAppMessage(options)), '_blank');
+        }
+
+        document.querySelectorAll('.wa-reserve-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lieuKey = document.getElementById('lieu').value;
+                const debut = document.getElementById('date-debut').value;
+                const fin = document.getElementById('date-fin').value;
+
+                if (debut && fin && fin < debut) {
+                    alert(t('alert.date_invalid'));
+                    return;
+                }
+
+                openWhatsAppReservation({
+                    carName: btn.dataset.carName || '',
+                    pickupLocation: getPickupLocationFr(lieuKey),
+                    startDate: debut,
+                    endDate: fin
+                });
+            });
+        });
 
         document.getElementById('booking-form').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -1476,7 +1865,12 @@
                 return;
             }
 
-            window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(buildWhatsAppMessage(lieuKey, debut, fin)), '_blank');
+            openWhatsAppReservation({
+                carName: '',
+                pickupLocation: getPickupLocationFr(lieuKey),
+                startDate: debut,
+                endDate: fin
+            });
         });
     </script>
 </body>
