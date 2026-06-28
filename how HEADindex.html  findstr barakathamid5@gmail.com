@@ -1,0 +1,76 @@
+[33me20cf92[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: commit: fix: restore missing Location Premium text in mobile header
+[33m47f5cea[m HEAD@{1}: commit: design: refactor mobile hero to match reference image 1000224898_2.png
+[33m9e0be3b[m HEAD@{2}: commit: design: fix mobile layout using mobil.jpeg to match reference
+[33m3e2f2ac[m HEAD@{3}: commit: fix: reset mobile hero to a clean simple flex layout
+[33m90be4c7[m HEAD@{4}: commit: fix: remove excessive mobile spacing and fix hero height
+[33mafcde31[m HEAD@{5}: commit: fix: restore missing content and fix mobile overlap
+[33me2f821f[m HEAD@{6}: commit: design: optimize mobile hero height and background positioning for mobile only
+[33mf2a0d3c[m HEAD@{7}: commit (amend): fix: responsive background change for mobile only using mobil.jpeg
+[33m80a259e[m HEAD@{8}: commit: fix: responsive background change for mobile only using mobil.jpeg
+[33md429ff2[m HEAD@{9}: commit: fix: adjust hero background position to center on mobile
+[33mb3f5275[m HEAD@{10}: commit: fix: restrict dark overlay to mobile only
+[33m9c94e87[m HEAD@{11}: commit: design: convert stats to horizontal layout
+[33mbc4ab48[m HEAD@{12}: commit: design: add dark overlay to hero section for better readability
+[33mc0e3325[m HEAD@{13}: commit: design: final horizontal alignment for mobile
+[33m8b8e3e7[m HEAD@{14}: commit: design: final centered icon layout for mobile
+[33me633f5f[m HEAD@{15}: commit: fix: include new images folder and apply layout fixes
+[33m5d72759[m HEAD@{16}: commit: design: force layout updates via agent terminal
+[33mfcaeeb0[m HEAD@{17}: commit: design: add mobile background image as jpeg
+[33m2c1d01a[m HEAD@{18}: commit: design: adjust background position for mobile screens
+[33m42271a9[m HEAD@{19}: commit: update hero section background
+[33m2b521ca[m HEAD@{20}: commit: Redesign hero to match premium Morocco road reference
+[33m58aa6de[m HEAD@{21}: commit: Redesign hero section with premium full-screen background and booking widget
+[33m1ad9760[m HEAD@{22}: commit: Fix footer icons alignment and responsiveness for mobile screens
+[33m08a57ff[m HEAD@{23}: commit: Add a professional dynamic car favicon to browser tab
+[33m7ebce00[m HEAD@{24}: commit: Add professional icons to footer contact details
+[33maa85d0b[m HEAD@{25}: commit: Force fix phone number rendering in footer
+[33m2e5d886[m HEAD@{26}: commit: Update footer with address and email
+[33m43a0bad[m HEAD@{27}: commit: style: update contact phone number to 0668744661
+[33m6a33cdc[m HEAD@{28}: commit: change num
+[33mb7d0b41[m HEAD@{29}: commit: feat: add multi-language business hours section to footer
+[33m05a7311[m HEAD@{30}: commit: feat: add social media trust signals to footer
+[33m0698d9a[m HEAD@{31}: commit: feat: implement dynamic FR/EN/AR multi-language engine with RTL support
+[33m55dac44[m HEAD@{32}: commit: feat: replace text initials with real professional customer profile images
+[33m3fd4c3d[m HEAD@{33}: commit: feat: add client avatar images and transform dates to dynamic 2026
+[33mfad94bd[m HEAD@{34}: commit: feat: add conversion-boosting testimonials and FAQ sections
+[33mb2441cc[m HEAD@{35}: commit: design: revert to the original vibrant commercial layout
+[33m0c884bf[m HEAD@{36}: commit: design: ultimate global brand black and white luxury architecture
+[33mcc4c970[m HEAD@{37}: commit: design: match premium global brand layout with clean typography
+[33m0e86af6[m HEAD@{38}: commit: design: pristine cinema gradient and remove box shapes
+[33mff8f87c[m HEAD@{39}: commit: design: add text-shadow to hero headline accent span
+[33m9a7d4bf[m HEAD@{40}: commit: design: perfect text contrast via professional shadows and glassmorphism
+[33mc10fa66[m HEAD@{41}: commit: design: optimize slider background visibility
+[33m2f3a9c9[m HEAD@{42}: commit: feat: add premium hero background slider with 5s fade
+[33m44690d2[m HEAD@{43}: commit: fix: automated composer complete recovery
+[33mb644cf0[m HEAD@{44}: commit: fix: force direct local image rendering
+[33mf8df62d[m HEAD@{45}: commit: manual upload of clio, logan and troc images
+[33m7af5ee4[m HEAD@{46}: commit: fix: manual adjustment for media folders
+[33m35f9220[m HEAD@{47}: commit: fix: manual force cms media paths config
+[33m2463ba0[m HEAD@{48}: commit: force create and activate images folder structural
+[33m24f2f98[m HEAD@{49}: commit: fix: absolute dynamic path clean for cms images
+[33m9f53979[m HEAD@{50}: commit: force fix public prefix path in index.html
+[33m71a36a5[m HEAD@{51}: pull origin master --rebase: Fast-forward
+[33maa0d3cb[m HEAD@{52}: commit: fix cms configuration add media folder
+[33mc282f6e[m HEAD@{53}: commit: move admin to repository root for static hosting
+[33m51b70d2[m HEAD@{54}: commit: ultimate admin build fix
+[33m393a463[m HEAD@{55}: commit: clean admin structure and force rebuild
+[33mf0f0f08[m HEAD@{56}: commit: force rebuild for admin path
+[33m8465196[m HEAD@{57}: commit: auto fix and move admin folder
+[33me332ecd[m HEAD@{58}: commit: recreate admin floder
+[33m4eb307a[m HEAD@{59}: commit: fix admin
+[33m35204e8[m HEAD@{60}: commit: fix cms
+[33m0277f94[m HEAD@{61}: commit: feat: add Decap CMS admin dashboard for fleet management
+[33m2526b53[m HEAD@{62}: commit: fix: design updates
+[33m920e72a[m HEAD@{63}: commit: fix: design updates
+[33m5225a32[m HEAD@{64}: commit: fix: design updates
+[33m1949767[m HEAD@{65}: commit: fix: design updates
+[33m9efab34[m HEAD@{66}: commit: fix: design updates
+[33m84c4987[m HEAD@{67}: commit: sup
+[33mae1209f[m HEAD@{68}: commit: md5 c
+[33md4b6efa[m HEAD@{69}: commit: md c4
+[33m374b9ce[m HEAD@{70}: commit: md c3
+[33m081b2b2[m HEAD@{71}: commit: modification car 2
+[33m669ba8d[m HEAD@{72}: commit: modificatio car
+[33m9857818[m HEAD@{73}: commit: add cars fleet section
+[33mb3f33ef[m HEAD@{74}: commit: update phone numbre
+[33m67d3567[m HEAD@{75}: commit (initial): first commit
