@@ -169,8 +169,9 @@
                 align-items: stretch;
                 overflow-x: hidden;
                 overflow-y: visible;
-                height: 100dvh;
-                min-height: unset;
+                height: auto;
+                min-height: 100dvh;
+                max-height: none;
             }
         }
         .hero-premium__bg {
@@ -908,421 +909,136 @@
         }
         .footer-nav-link:hover { color: #f59e0b; }
 
-        /* mobile-responsive-v2 — phones only; tablet/desktop (768px+) unchanged */
+        /* Mobile layout fixes — phones only (768px+ unchanged) */
         @media (max-width: 767px) {
-            html {
-                overflow-x: hidden;
-                -webkit-text-size-adjust: 100%;
-            }
-
+            html,
             body {
                 overflow-x: hidden;
-                max-width: 100vw;
-            }
-
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-            }
-
-            h1, h2, h3, h4, h5, h6,
-            p, a, button, label, span, li, blockquote, summary {
-                overflow-wrap: anywhere;
-                word-break: break-word;
                 max-width: 100%;
             }
 
-            img, video, iframe, svg {
-                max-width: 100%;
-                height: auto;
-            }
-
-            section,
-            header,
-            footer,
-            main,
-            .max-w-7xl,
-            .max-w-4xl,
-            .max-w-3xl,
-            .max-w-2xl,
-            .max-w-md {
+            img,
+            video,
+            iframe {
                 max-width: 100%;
             }
 
-            /* Header — logo + lang + menu on one line */
+            .testimonials-title {
+                white-space: normal;
+            }
+
+            /* Header — logo, language switcher and menu on one row */
             .site-header__bar {
                 display: flex;
-                flex-wrap: nowrap;
                 align-items: center;
                 justify-content: space-between;
-                gap: 0.375rem;
-                padding: 0.4375rem 0.625rem;
+                gap: 0.5rem;
+                min-width: 0;
             }
 
             .site-header__brand {
                 flex: 1 1 auto;
                 min-width: 0;
-                max-width: calc(100% - 6.75rem);
             }
 
             .site-header__logo {
-                width: 112px;
+                width: clamp(88px, 30vw, 130px);
                 max-width: 100%;
                 height: auto;
             }
 
             .site-header__actions {
-                flex: 0 0 auto;
-                gap: 0.3125rem;
+                flex-shrink: 0;
             }
 
             .site-header__actions .lang-switch {
                 display: flex !important;
-                padding: 0.1875rem 0.3125rem;
-                font-size: 0.625rem;
-                gap: 0.0625rem;
-                border-radius: 0.375rem;
             }
 
-            .site-header__actions .lang-btn {
-                padding: 0 0.0625rem;
-            }
-
-            #menu-btn {
-                width: 2rem;
-                height: 2rem;
-                flex-shrink: 0;
-            }
-
-            /* Hero — fit viewport, no overflow */
-            .hero-premium {
-                min-height: 100dvh;
-                height: 100dvh;
-                max-height: 100dvh;
-                overflow: hidden;
-            }
-
-            .hero-premium__content {
-                flex: 1 1 auto;
-                min-height: 0;
-                padding-top: 4.25rem;
-                padding-left: 0;
-                padding-right: 0;
-                display: flex;
-                flex-direction: column;
-            }
-
+            /* Hero — balanced height, equal side margins from max-md:px-4 */
             .hero-premium__content > div {
-                flex: 1 1 auto;
-                min-height: 0;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                overflow: hidden;
+                min-width: 0;
             }
 
             .hero-premium__content .text-center {
-                flex: 0 1 auto;
-                min-height: 0;
-                padding: 0 0.875rem;
-                overflow: hidden;
-            }
-
-            .hero-premium__content .text-center > p.text-amber-500 {
-                font-size: 0.5625rem;
-                letter-spacing: 0.08em;
-                line-height: 1.35;
+                min-width: 0;
             }
 
             #booking h1 {
-                font-size: clamp(1.1875rem, 5vw + 0.35rem, 1.6875rem) !important;
-                line-height: 1.12 !important;
-                margin-top: 0.5rem !important;
-                padding-inline: 0;
+                overflow-wrap: anywhere;
             }
 
-            /* Hero stats — stacked */
-            .hero-premium__content .text-center > div.flex {
-                flex-direction: column !important;
-                flex-wrap: nowrap !important;
-                align-items: center !important;
-                gap: 0.5rem !important;
-                margin-top: 0.75rem !important;
+            /* Booking card — fully visible, consistent width and spacing */
+            #booking .booking-widget {
                 width: 100%;
-            }
-
-            .hero-premium__content .text-center > div.flex > div {
-                width: 100%;
-                max-width: 11rem;
-            }
-
-            .hero-premium__content .text-center > div.flex > div p {
-                font-size: 0.75rem;
-            }
-
-            .hero-premium__content .text-center > div.flex .text-lg {
-                font-size: 1rem !important;
-            }
-
-            /* Booking form — 100% width */
-            .booking-widget {
-                width: 100% !important;
-                max-width: none !important;
-                margin: 0 !important;
-                flex: 0 0 auto;
-                max-height: min(46dvh, 22rem);
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-                border-radius: 1.25rem 1.25rem 0 0;
-                padding: 0.875rem 1rem !important;
+                max-width: 100%;
+                max-height: none !important;
+                overflow: visible !important;
+                margin-inline: 0;
+                padding-bottom: 4.75rem;
                 box-sizing: border-box;
             }
 
+            #booking-form {
+                width: 100%;
+            }
+
+            #booking-form > div {
+                width: 100%;
+                min-width: 0;
+            }
+
+            #booking-form .grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.5rem;
+                width: 100%;
+                min-width: 0;
+            }
+
+            #booking-form .grid > div {
+                min-width: 0;
+            }
+
             .booking-field {
-                padding: 0.6875rem 0.75rem;
+                width: 100%;
                 min-width: 0;
             }
 
             .booking-field select,
             .booking-field input {
-                font-size: 0.8125rem;
                 min-width: 0;
-            }
-
-            .booking-field-label {
-                font-size: 0.5625rem;
             }
 
             .booking-submit {
-                font-size: 0.8125rem;
-                padding: 0.75rem;
+                width: 100%;
+            }
+
+            /* Prevent text/button overflow in lower sections */
+            .google-reviews-btn,
+            .testimonials-footer-link,
+            .maps-link-btn,
+            .wa-reserve-btn,
+            #contact .wa-btn {
                 max-width: 100%;
                 white-space: normal;
-            }
-
-            .booking-submit span {
-                text-align: center;
-                line-height: 1.3;
-            }
-
-            #booking-form .grid {
-                min-width: 0;
-            }
-
-            /* Section spacing */
-            #fleet,
-            #testimonials,
-            #faq,
-            #features,
-            #contact,
-            #social,
-            footer {
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-
-            #fleet,
-            #testimonials,
-            #faq,
-            #features,
-            #contact,
-            #social {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            section h2 {
-                font-size: clamp(1.3125rem, 4.5vw + 0.5rem, 1.875rem);
-                line-height: 1.2;
-            }
-
-            /* Fleet cards */
-            #fleet .glass-card .p-6 {
-                padding: 1.125rem;
-            }
-
-            #fleet .flex.items-start {
-                flex-wrap: wrap;
-            }
-
-            /* Service cards */
-            #features .glass-card {
-                padding: 1.125rem;
-            }
-
-            #features .grid {
-                gap: 0.875rem;
-            }
-
-            /* Testimonials */
-            .testimonials-title {
-                white-space: normal;
-                overflow-wrap: anywhere;
-                word-break: break-word;
-                line-height: 1.25;
-                font-size: clamp(1.125rem, 4vw + 0.5rem, 1.625rem);
-            }
-
-            #testimonials .review-card {
-                padding: 1.125rem;
-            }
-
-            #testimonials .grid {
-                gap: 1rem;
             }
 
             .review-card-header {
                 flex-wrap: wrap;
-                gap: 0.5rem;
-            }
-
-            .google-reviews-btn,
-            .testimonials-footer-link {
-                max-width: 100%;
-                white-space: normal;
-                text-align: center;
-                line-height: 1.45;
-                justify-content: center;
-            }
-
-            .google-maps-badge {
-                max-width: 100%;
-            }
-
-            /* Contact */
-            #contact .glass {
-                padding: 1.75rem 1.125rem;
-                border-radius: 1.25rem;
-                max-width: 100%;
-            }
-
-            #contact .wa-btn {
-                width: 100%;
-                max-width: 100%;
-                padding: 0.875rem 1rem;
-                font-size: 0.875rem;
-                box-sizing: border-box;
-                white-space: normal;
-            }
-
-            #contact .wa-btn span {
-                text-align: center;
-                line-height: 1.35;
-            }
-
-            /* FAQ */
-            .faq-item summary {
-                padding: 0.875rem 1rem;
-                font-size: 0.8125rem;
-                gap: 0.625rem;
-            }
-
-            .faq-answer {
-                margin-left: 1rem;
-                margin-right: 1rem;
-                padding-left: 0;
-                padding-right: 0;
-                font-size: 0.8125rem;
-            }
-
-            .wa-reserve-btn {
-                max-width: 100%;
-                font-size: 0.8125rem;
-                white-space: normal;
-            }
-
-            /* Footer */
-            .footer-site-nav {
-                gap: 0.625rem 0.875rem;
-                justify-content: center;
             }
 
             .footer-detail-value,
-            .hours-row {
+            .hours-row,
+            .google-maps-badge {
                 min-width: 0;
             }
-
-            .hours-row-time {
-                white-space: normal;
-                text-align: end;
-            }
-
-            .maps-link-btn {
-                max-width: 100%;
-                white-space: normal;
-                text-align: center;
-                line-height: 1.35;
-            }
-
-            .contact-map-wrap {
-                max-width: 100%;
-            }
-
-            .wa-float {
-                bottom: 0.875rem;
-                right: 0.875rem;
-                width: 3.125rem;
-                height: 3.125rem;
-            }
-
-            [dir="rtl"] .wa-float {
-                right: auto;
-                left: 0.875rem;
-            }
-        }
-
-        @media (max-width: 430px) {
-            .site-header__logo { width: 102px; }
-            #booking h1 {
-                font-size: clamp(1.125rem, 4.8vw + 0.4rem, 1.5rem) !important;
-            }
-        }
-
-        @media (max-width: 390px) {
-            .site-header__logo { width: 96px; }
-            .site-header__actions .lang-switch {
-                padding: 0.125rem 0.25rem;
-                font-size: 0.5625rem;
-            }
-            #booking h1 {
-                font-size: 1.1875rem !important;
-            }
-            .hero-premium__content .text-center {
-                padding: 0 0.75rem;
-            }
-        }
-
-        @media (max-width: 375px) {
-            .site-header__bar { padding: 0.375rem 0.5rem; }
-            .site-header__logo { width: 92px; }
-            #booking h1 { font-size: 1.125rem !important; }
-            .booking-widget { padding: 0.75rem 0.875rem !important; }
         }
 
         @media (max-width: 360px) {
-            .site-header__logo { width: 88px; }
-            #booking h1 { font-size: 1.0625rem !important; }
             #booking-form .grid {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: 1fr;
             }
-        }
-
-        @media (max-width: 320px) {
-            .site-header__logo { width: 82px; }
-            .site-header__brand { max-width: calc(100% - 6.25rem); }
-            #booking h1 { font-size: 1rem !important; }
-            .hero-premium__content .text-center > p.text-amber-500 {
-                font-size: 0.5rem;
-                letter-spacing: 0.06em;
-            }
-            .booking-widget {
-                padding: 0.625rem 0.75rem !important;
-                max-height: min(48dvh, 20rem);
-            }
-            #contact .glass { padding: 1.5rem 0.875rem; }
         }
     </style>
 </head>
