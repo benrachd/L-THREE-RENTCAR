@@ -756,7 +756,7 @@
     <header class="fixed top-0 inset-x-0 z-50 site-header">
         <div class="site-header__bar">
             <a href="#" class="site-header__brand flex items-center min-w-0">
-                <img src="images/logo.png" alt="L.THREE RENTCAR" class="site-header__logo">
+                <img src="images/logo.png" alt="L.THREE RENTCAR" data-i18n-alt="aria.logo" class="site-header__logo">
             </a>
 
             <nav class="site-header__nav hidden xl:flex items-center gap-6 2xl:gap-9">
@@ -767,18 +767,18 @@
             </nav>
 
             <div class="site-header__actions">
-                <div class="lang-switch hidden sm:flex shrink-0" role="group" aria-label="Language">
+                <div class="lang-switch hidden sm:flex shrink-0" role="group" data-i18n-aria="aria.language" aria-label="Langue">
                     <button type="button" class="lang-btn active" data-lang="fr">FR</button>
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="en">EN</button>
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="ar">ع</button>
                 </div>
-                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="nav-wa-btn hidden lg:inline-flex text-sm px-4 xl:px-5 py-2 rounded-lg items-center gap-2 shrink-0">
+                <a href="https://wa.me/212668336781" data-wa-prefill="wa.prefill_rent" class="nav-wa-btn hidden lg:inline-flex text-sm px-4 xl:px-5 py-2 rounded-lg items-center gap-2 shrink-0">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                     <span data-i18n="nav.whatsapp">WhatsApp</span>
                 </a>
-                <button id="menu-btn" type="button" class="xl:hidden w-9 h-9 flex flex-col items-center justify-center gap-1 rounded-lg border border-slate-700/60 shrink-0" aria-label="Menu">
+                <button id="menu-btn" type="button" class="xl:hidden w-9 h-9 flex flex-col items-center justify-center gap-1 rounded-lg border border-slate-700/60 shrink-0" data-i18n-aria="aria.menu" aria-label="Menu">
                     <span class="w-5 h-0.5 bg-slate-300 block"></span>
                     <span class="w-5 h-0.5 bg-slate-300 block"></span>
                     <span class="w-3 h-0.5 bg-slate-300 block self-end mr-2"></span>
@@ -799,7 +799,7 @@
                     <span class="lang-divider">|</span>
                     <button type="button" class="lang-btn" data-lang="ar">ع</button>
                 </div>
-                <a href="https://wa.me/212668336781" class="nav-wa-btn text-center py-3 rounded-lg text-sm mt-1 flex items-center justify-center gap-2" data-i18n="nav.whatsapp">WhatsApp</a>
+                <a href="https://wa.me/212668336781" data-wa-prefill="wa.prefill_rent" class="nav-wa-btn text-center py-3 rounded-lg text-sm mt-1 flex items-center justify-center gap-2" data-i18n="nav.whatsapp">WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -861,7 +861,7 @@
                             <label for="lieu" class="booking-field-label" data-i18n="form.location">Lieu de prise en charge</label>
                             <div class="booking-field booking-field--select">
                                 <svg class="booking-field-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                <select id="lieu" name="lieu" required aria-label="Lieu de prise en charge">
+                                <select id="lieu" name="lieu" required data-i18n-aria="form.location" aria-label="Lieu de prise en charge">
                                     <option value="fes" data-i18n="opt.fes">Fès Centre-ville</option>
                                     <option value="airport" data-i18n="opt.airport">Fès — Aéroport Saïss</option>
                                     <option value="gare" data-i18n="opt.gare">Fès — Gare ONCF</option>
@@ -874,14 +874,14 @@
                                 <label for="date-debut" class="booking-field-label" data-i18n="form.date_start">Date de début</label>
                                 <div class="booking-field">
                                     <svg class="booking-field-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                    <input type="date" id="date-debut" name="date-debut" required aria-label="Date de début">
+                                    <input type="date" id="date-debut" name="date-debut" required data-i18n-aria="form.date_start" aria-label="Date de début">
                                 </div>
                             </div>
                             <div>
                                 <label for="date-fin" class="booking-field-label" data-i18n="form.date_end">Date de fin</label>
                                 <div class="booking-field">
                                     <svg class="booking-field-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                    <input type="date" id="date-fin" name="date-fin" required aria-label="Date de fin">
+                                    <input type="date" id="date-fin" name="date-fin" required data-i18n-aria="form.date_end" aria-label="Date de fin">
                                 </div>
                             </div>
                         </div>
@@ -911,7 +911,7 @@
                     <h2 class="text-3xl sm:text-4xl font-black mt-3" data-i18n="fleet.title">Véhicules disponibles</h2>
                     <p class="text-slate-400 mt-2 max-w-md" data-i18n="fleet.desc">Entretenus avec soin, prêts pour vos routes marocaines</p>
                 </div>
-                <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20voir%20toute%20votre%20flotte%20disponible." class="text-amber-500 text-sm font-semibold hover:text-amber-400 transition-colors flex items-center gap-2 shrink-0">
+                <a href="https://wa.me/212668336781" data-wa-prefill="wa.prefill_fleet" class="text-amber-500 text-sm font-semibold hover:text-amber-400 transition-colors flex items-center gap-2 shrink-0">
                     <span data-i18n="fleet.view_all">Voir toute la flotte</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
@@ -925,6 +925,7 @@
                         <img
                             src="public/images/clio.jpg"
                             alt="Renault Clio"
+                            data-i18n-alt="fleet.car_clio"
                             class="w-full h-full object-cover"
                             loading="lazy"
                             width="600"
@@ -935,7 +936,7 @@
                         <div class="flex items-start justify-between gap-3">
                             <div>
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-sky-400 bg-sky-400/10 px-2.5 py-1 rounded" data-i18n="fleet.popular">Populaire</span>
-                                <h3 class="text-xl font-bold mt-3">Renault Clio</h3>
+                                <h3 class="text-xl font-bold mt-3" data-i18n="fleet.car_clio">Renault Clio</h3>
                             </div>
                             <div class="text-right shrink-0">
                                 <p class="text-2xl font-black text-amber-500">350</p>
@@ -945,7 +946,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_clio">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Manuelle &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Renault Clio">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-key="fleet.car_clio">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -958,6 +959,7 @@
                         <img
                             src="public/images/logan.jpg"
                             alt="Dacia Logan"
+                            data-i18n-alt="fleet.car_logan"
                             class="w-full h-full object-cover"
                             loading="lazy"
                             width="600"
@@ -968,7 +970,7 @@
                         <div class="flex items-start justify-between gap-3">
                             <div>
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded" data-i18n="fleet.economy">Économique</span>
-                                <h3 class="text-xl font-bold mt-3">Dacia Logan</h3>
+                                <h3 class="text-xl font-bold mt-3" data-i18n="fleet.car_logan">Dacia Logan</h3>
                             </div>
                             <div class="text-right shrink-0">
                                 <p class="text-2xl font-black text-amber-500">300</p>
@@ -978,7 +980,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_logan">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Manuelle &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Dacia Logan">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-key="fleet.car_logan">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -991,6 +993,7 @@
                         <img
                             src="public/images/troc.png"
                             alt="Volkswagen T-Roc"
+                            data-i18n-alt="fleet.car_troc"
                             class="w-full h-full object-cover"
                             loading="lazy"
                             width="600"
@@ -1001,7 +1004,7 @@
                         <div class="flex items-start justify-between gap-3">
                             <div>
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-amber-500 bg-amber-500/10 px-2.5 py-1 rounded" data-i18n="fleet.suv">SUV Luxury</span>
-                                <h3 class="text-xl font-bold mt-3">Volkswagen T-Roc</h3>
+                                <h3 class="text-xl font-bold mt-3" data-i18n="fleet.car_troc">Volkswagen T-Roc</h3>
                             </div>
                             <div class="text-right shrink-0">
                                 <p class="text-2xl font-black text-amber-500">600</p>
@@ -1011,7 +1014,7 @@
                         <p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="fleet.spec_troc">
                             ⛽ Diesel &nbsp;•&nbsp; ⚙️ Automatique &nbsp;•&nbsp; 👤 5 Places
                         </p>
-                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-name="Volkswagen T-Roc">
+                        <a href="#" class="wa-btn wa-reserve-btn flex items-center justify-center gap-2 text-white font-bold py-3 rounded-xl mt-5 text-sm" data-car-key="fleet.car_troc">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                             <span data-i18n="fleet.book">Réserver</span>
                         </a>
@@ -1031,7 +1034,7 @@
                     <span data-i18n="testimonials.eyebrow">✨ Avis de nos clients</span>
                 </span>
                 <h2 class="testimonials-title font-black mt-3" data-i18n="testimonials.title">Ce que disent nos clients sur Google Maps</h2>
-                <p class="stars text-base mt-4" aria-label="Note 5.0 sur 5">⭐⭐⭐⭐⭐ <span class="text-white font-bold">5.0/5</span></p>
+                <p class="stars text-base mt-4" data-i18n-aria="aria.rating_summary" aria-label="Note 5.0 sur 5">⭐⭐⭐⭐⭐ <span class="text-white font-bold">5.0/5</span></p>
                 <p class="text-slate-400 mt-3" data-i18n="testimonials.desc">25 avis authentiques publiés sur Google Maps</p>
                 <a href="https://www.google.com/maps/place/L.THREE.RENTCAR/@34.0420844,-5.0092698,17z/data=!4m6!3m5!1s0xd9f8b70313eeb9b:0x7fd2d83f5dacd21b!8m2!3d34.0420844!4d-5.0092698!16s%2Fg%2F11yn1h8rty" target="_blank" rel="noopener noreferrer" class="google-reviews-btn" data-i18n="testimonials.link">Voir les 25 avis sur Google Maps ↗</a>
             </div>
@@ -1039,13 +1042,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
                     <div class="review-card-header">
-                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                        <span class="google-maps-badge" aria-label="Google Maps">
+                        <p class="stars text-sm" data-i18n-aria="aria.rating_stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" data-i18n-aria="aria.google_maps" aria-label="Google Maps">
                             <span class="google-maps-badge__icons" aria-hidden="true">
                                 <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
                                 <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
                             </span>
-                            <span>Google Maps</span>
+                            <span data-i18n="aria.google_maps">Google Maps</span>
                         </span>
                     </div>
                     <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial1.text">
@@ -1062,13 +1065,13 @@
 
                 <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
                     <div class="review-card-header">
-                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                        <span class="google-maps-badge" aria-label="Google Maps">
+                        <p class="stars text-sm" data-i18n-aria="aria.rating_stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" data-i18n-aria="aria.google_maps" aria-label="Google Maps">
                             <span class="google-maps-badge__icons" aria-hidden="true">
                                 <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
                                 <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
                             </span>
-                            <span>Google Maps</span>
+                            <span data-i18n="aria.google_maps">Google Maps</span>
                         </span>
                     </div>
                     <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial2.text">
@@ -1085,13 +1088,13 @@
 
                 <article class="review-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col">
                     <div class="review-card-header">
-                        <p class="stars text-sm" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
-                        <span class="google-maps-badge" aria-label="Google Maps">
+                        <p class="stars text-sm" data-i18n-aria="aria.rating_stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</p>
+                        <span class="google-maps-badge" data-i18n-aria="aria.google_maps" aria-label="Google Maps">
                             <span class="google-maps-badge__icons" aria-hidden="true">
                                 <svg class="google-g-logo" width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
                                 <svg class="google-pin-icon" width="11" height="11" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.35"/></svg>
                             </span>
-                            <span>Google Maps</span>
+                            <span data-i18n="aria.google_maps">Google Maps</span>
                         </span>
                     </div>
                     <blockquote class="review-quote text-slate-300 text-sm flex-1" data-i18n="testimonial3.text">
@@ -1218,7 +1221,7 @@
         <div class="max-w-4xl mx-auto glass rounded-3xl p-10 sm:p-14 text-center">
             <h2 class="text-3xl sm:text-4xl font-black" data-i18n="cta.title">Prêt à partir ?</h2>
             <p class="text-slate-400 mt-4 max-w-md mx-auto" data-i18n="cta.desc">Contactez-nous sur WhatsApp et recevez une confirmation en moins d'une minute.</p>
-            <a href="https://wa.me/212668336781?text=Bonjour%2C%20je%20souhaite%20louer%20une%20voiture%20%C3%A0%20F%C3%A8s." class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl mt-8 text-base">
+            <a href="https://wa.me/212668336781" data-wa-prefill="wa.prefill_rent" class="wa-btn inline-flex items-center justify-center gap-3 text-white font-bold px-10 py-4 rounded-xl mt-8 text-base">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                 <span data-i18n="cta.whatsapp_btn">WhatsApp · +212 668 336 781</span>
             </a>
@@ -1231,13 +1234,13 @@
             <p class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2" data-i18n="social.eyebrow">Restez connectés</p>
             <h2 class="text-xl sm:text-2xl font-black text-white mb-8" data-i18n="social.title">Suivez-nous</h2>
             <div class="flex items-center justify-center gap-5 sm:gap-6">
-                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" data-i18n-aria="aria.instagram" aria-label="Instagram">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" data-i18n-aria="aria.facebook" aria-label="Facebook">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
-                <a href="https://wa.me/212668336781" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                <a href="https://wa.me/212668336781" target="_blank" rel="noopener noreferrer" class="social-link" data-i18n-aria="aria.whatsapp" aria-label="WhatsApp">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
                 </a>
             </div>
@@ -1345,7 +1348,7 @@
     </footer>
 
     <!-- WhatsApp floating -->
-    <a href="https://wa.me/212668336781" class="wa-float wa-btn fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center z-50 hover:scale-110" aria-label="WhatsApp">
+    <a href="https://wa.me/212668336781" data-wa-prefill="wa.prefill_rent" class="wa-float wa-btn fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center z-50 hover:scale-110" data-i18n-aria="aria.whatsapp" aria-label="WhatsApp">
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.92.92l4.458-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.99-1.364l-.357-.212-2.645.887.887-2.58-.233-.374A9.818 9.818 0 1121.818 12 9.83 9.83 0 0112 21.818z"/></svg>
     </a>
 
@@ -1391,16 +1394,19 @@
                 'fleet.spec_logan': '⛽ Diesel • ⚙️ Manuelle • 👤 5 Places',
                 'fleet.spec_troc': '⛽ Diesel • ⚙️ Automatique • 👤 5 Places',
                 'fleet.book': 'Réserver',
+                'fleet.car_clio': 'Renault Clio',
+                'fleet.car_logan': 'Dacia Logan',
+                'fleet.car_troc': 'Volkswagen T-Roc',
                 'testimonials.eyebrow': '✨ Avis de nos clients',
                 'testimonials.title': 'Ce que disent nos clients sur Google Maps',
                 'testimonials.desc': '25 avis authentiques publiés sur Google Maps',
                 'testimonials.link': 'Voir les 25 avis sur Google Maps ↗',
                 'testimonials.footer': 'Voir tous les 25 avis sur Google Maps →',
-                'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
+                'testimonial1.text': 'Service excellent du début à la fin ! La voiture était propre, confortable et en parfait état. L\'équipe était très professionnelle, accueillante et toujours disponible pour répondre à nos questions. La prise en charge et la restitution du véhicule ont été rapides et fluides. Je recommande vivement cette agence à quiconque recherche un service fiable et de qualité.',
                 'testimonial1.location': 'Publié sur Google Maps • il y a 1 mois',
                 'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
                 'testimonial2.location': 'Publié sur Google Maps • il y a 3 semaines',
-                'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
+                'testimonial3.text': 'J\'ai loué une voiture ici et j\'en suis extrêmement satisfait. La voiture était pratiquement neuve et en excellent état. Service professionnel et expérience de location fluide. Fortement recommandé.',
                 'testimonial3.location': 'Publié sur Google Maps • il y a 1 mois',
                 'faq.eyebrow': '🙋 Questions Fréquentes',
                 'faq.title': 'Tout ce qu\'il faut savoir',
@@ -1456,6 +1462,27 @@
                 'hours.time_saturday': '09:00 - 18:00',
                 'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'Assistance WhatsApp 24/7',
+                'aria.language': 'Langue',
+                'aria.menu': 'Menu',
+                'aria.rating_summary': 'Note 5,0 sur 5',
+                'aria.rating_stars': '5 étoiles sur 5',
+                'aria.google_maps': 'Google Maps',
+                'aria.whatsapp': 'WhatsApp',
+                'aria.instagram': 'Instagram',
+                'aria.facebook': 'Facebook',
+                'aria.logo': 'L.THREE RENTCAR',
+                'wa.prefill_rent': 'Bonjour, je souhaite louer une voiture à Fès.',
+                'wa.prefill_fleet': 'Bonjour, je souhaite voir toute votre flotte disponible.',
+                'wa.msg.greeting': 'Bonjour 👋',
+                'wa.msg.intro_car': 'Je souhaite réserver le véhicule suivant :',
+                'wa.msg.intro_booking': 'Je souhaite réserver un véhicule :',
+                'wa.msg.car': '🚗 Véhicule : {name}',
+                'wa.msg.location': '📍 Lieu de prise en charge : {location}',
+                'wa.msg.start_date': '📅 Date de début : {date}',
+                'wa.msg.end_date': '📅 Date de retour : {date}',
+                'wa.msg.duration': '🗓️ Durée : {days} jour(s)',
+                'wa.msg.confirm': 'Merci de me confirmer la disponibilité ainsi que le prix total.',
+                'wa.msg.signoff': 'Cordialement.',
                 'alert.date_invalid': 'La date de fin doit être après la date de début.'
             },
             en: {
@@ -1470,18 +1497,18 @@
                 'hero.eyebrow': 'PREMIUM RENTAL • MOROCCO',
                 'hero.title1': 'Car rental in Fez',
                 'hero.title2': 'with full confidence',
-                'hero.desc': 'With L.THREE RENTCAR, hit the road with full confidence.',
+                'hero.desc': 'Recent vehicles, transparent pricing, and quick booking via WhatsApp. 24/7 support and delivery to Fez-Saiss Airport.',
                 'hero.stat1': 'Happy clients',
                 'hero.stat2': 'Support',
-                'hero.stat3': 'Average rating',
+                'hero.stat3': '25 Google reviews',
                 'form.title': 'Book your vehicle',
                 'form.subtitle': 'Availability confirmed within minutes',
                 'form.location': 'Pick-up location',
                 'form.date_start': 'Start date',
                 'form.date_end': 'End date',
-                'form.search': 'Search',
+                'form.search': 'View availability',
                 'form.confirm': 'Instant secure confirmation',
-                'opt.fes': 'Fez Centre-ville',
+                'opt.fes': 'Fez City Centre',
                 'opt.airport': 'Fez — Saiss Airport',
                 'opt.gare': 'Fez — ONCF Station',
                 'fleet.eyebrow': 'Our fleet',
@@ -1496,6 +1523,9 @@
                 'fleet.spec_logan': '⛽ Diesel • ⚙️ Manual • 👤 5 Seats',
                 'fleet.spec_troc': '⛽ Diesel • ⚙️ Automatic • 👤 5 Seats',
                 'fleet.book': 'Book now',
+                'fleet.car_clio': 'Renault Clio',
+                'fleet.car_logan': 'Dacia Logan',
+                'fleet.car_troc': 'Volkswagen T-Roc',
                 'testimonials.eyebrow': '✨ Customer reviews',
                 'testimonials.title': 'What our clients say on Google Maps',
                 'testimonials.desc': '25 authentic reviews published on Google Maps',
@@ -1503,7 +1533,7 @@
                 'testimonials.footer': 'View all 25 reviews on Google Maps →',
                 'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
                 'testimonial1.location': 'Published on Google Maps • 1 month ago',
-                'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
+                'testimonial2.text': 'Excellent rental service. The car was clean, well maintained and matched the description. Professional and welcoming staff. Pick-up and return were quick and smooth. I highly recommend.',
                 'testimonial2.location': 'Published on Google Maps • 3 weeks ago',
                 'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
                 'testimonial3.location': 'Published on Google Maps • 1 month ago',
@@ -1524,7 +1554,7 @@
                 'feat1.title': 'Airport delivery',
                 'feat1.desc': 'Pick-up at Fez-Saiss or city centre',
                 'feat2.title': 'Insurance included',
-                'feat2.desc': 'Full coverage for peace of mind',
+                'feat2.desc': 'Comprehensive cover for complete peace of mind',
                 'feat3.title': 'No hidden fees',
                 'feat3.desc': 'The price shown is the final price',
                 'feat4.title': '24/7 support',
@@ -1561,6 +1591,27 @@
                 'hours.time_saturday': '09:00 - 18:00',
                 'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'WhatsApp support 24/7',
+                'aria.language': 'Language',
+                'aria.menu': 'Menu',
+                'aria.rating_summary': 'Rating 5.0 out of 5',
+                'aria.rating_stars': '5 stars out of 5',
+                'aria.google_maps': 'Google Maps',
+                'aria.whatsapp': 'WhatsApp',
+                'aria.instagram': 'Instagram',
+                'aria.facebook': 'Facebook',
+                'aria.logo': 'L.THREE RENTCAR',
+                'wa.prefill_rent': 'Hello, I would like to rent a car in Fez.',
+                'wa.prefill_fleet': 'Hello, I would like to see your full available fleet.',
+                'wa.msg.greeting': 'Hello 👋',
+                'wa.msg.intro_car': 'I would like to book the following vehicle:',
+                'wa.msg.intro_booking': 'I would like to book a vehicle:',
+                'wa.msg.car': '🚗 Vehicle: {name}',
+                'wa.msg.location': '📍 Pick-up location: {location}',
+                'wa.msg.start_date': '📅 Start date: {date}',
+                'wa.msg.end_date': '📅 Return date: {date}',
+                'wa.msg.duration': '🗓️ Duration: {days} day(s)',
+                'wa.msg.confirm': 'Please confirm availability and the total price.',
+                'wa.msg.signoff': 'Kind regards.',
                 'alert.date_invalid': 'End date must be after start date.'
             },
             ar: {
@@ -1575,16 +1626,16 @@
                 'hero.eyebrow': 'تأجير فاخر • المغرب',
                 'hero.title1': 'تأجير سيارات في فاس',
                 'hero.title2': 'بكل ثقة',
-                'hero.desc': 'مع L.THREE RENTCAR، انطلق على الطريق بكل ثقة.',
+                'hero.desc': 'سيارات حديثة، أسعار شفافة، وحجز سريع عبر واتساب. مساعدة على مدار الساعة وتوصيل إلى مطار فاس سايس.',
                 'hero.stat1': 'عملاء راضون',
                 'hero.stat2': 'مساعدة',
-                'hero.stat3': 'التقييم',
+                'hero.stat3': '25 مراجعة على Google',
                 'form.title': 'احجز سيارتك',
                 'form.subtitle': 'تأكيد التوفر خلال دقائق',
                 'form.location': 'مكان الاستلام',
                 'form.date_start': 'تاريخ البداية',
                 'form.date_end': 'تاريخ النهاية',
-                'form.search': 'بحث',
+                'form.search': 'عرض التوفر',
                 'form.confirm': 'تأكيد فوري وآمن',
                 'opt.fes': 'فاس وسط المدينة',
                 'opt.airport': 'فاس — مطار سايس',
@@ -1601,16 +1652,19 @@
                 'fleet.spec_logan': '⛽ ديزل • ⚙️ يدوية • 👤 5 مقاعد',
                 'fleet.spec_troc': '⛽ ديزل • ⚙️ أوتوماتيك • 👤 5 مقاعد',
                 'fleet.book': 'احجز',
+                'fleet.car_clio': 'Renault Clio',
+                'fleet.car_logan': 'Dacia Logan',
+                'fleet.car_troc': 'Volkswagen T-Roc',
                 'testimonials.eyebrow': '✨ آراء عملائنا',
                 'testimonials.title': 'ما يقوله عملاؤنا على Google Maps',
                 'testimonials.desc': '25 مراجعة حقيقية منشورة على Google Maps',
                 'testimonials.link': 'عرض 25 مراجعة على Google Maps ↗',
                 'testimonials.footer': 'عرض جميع المراجعات الـ 25 على Google Maps →',
-                'testimonial1.text': 'Excellent service from start to finish! The car was clean, comfortable, and in perfect condition. The staff was very professional, welcoming, and always available to answer our questions. Picking up and returning the vehicle was quick and seamless. I highly recommend this agency to anyone looking for reliable, high-quality service.',
+                'testimonial1.text': 'خدمة ممتازة من البداية إلى النهاية! السيارة كانت نظيفة ومريحة وبحالة مثالية. كان الفريق محترفاً ومضيافاً ومتاحاً دائماً للإجابة على أسئلتنا. استلام السيارة وإرجاعها كان سريعاً وسلساً. أنصح بشدة بهذه الوكالة لمن يبحث عن خدمة موثوقة وعالية الجودة.',
                 'testimonial1.location': 'نُشر على Google Maps • منذ شهر',
-                'testimonial2.text': 'Excellent service de location. Véhicule propre, bien entretenu et conforme à la description. Personnel professionnel et accueillant. La prise en charge et la restitution se sont déroulées rapidement. Je recommande vivement.',
+                'testimonial2.text': 'خدمة تأجير ممتازة. سيارة نظيفة ومحافظ عليها ومطابقة للوصف. فريق محترف ومضياف. تمت عملية الاستلام والتسليم بسرعة وسلاسة. أنصح بشدة.',
                 'testimonial2.location': 'نُشر على Google Maps • منذ 3 أسابيع',
-                'testimonial3.text': 'I rented a car here and was extremely satisfied. The car was practically new and in excellent condition. Professional service and a smooth rental experience. Highly recommended.',
+                'testimonial3.text': 'استأجرت سيارة هنا وكنت راضياً للغاية. السيارة شبه جديدة وبحالة ممتازة. خدمة احترافية وتجربة تأجير سلسة. أنصح بشدة.',
                 'testimonial3.location': 'نُشر على Google Maps • منذ شهر',
                 'faq.eyebrow': '🙋 الأسئلة الشائعة',
                 'faq.title': 'كل ما تحتاج معرفته',
@@ -1622,7 +1676,7 @@
                 'faq.q3': 'هل تقدمون التوصيل للمطار؟',
                 'faq.a3': 'نعم! نوفر <strong class="text-slate-300">توصيلاً مجانياً</strong> إلى <strong class="text-slate-300">مطار فاس سايس</strong>، وكذلك وسط مدينة فاس. أذكر رقم رحلتك عند الحجز — ستنتظرك سيارتك عند الوصول.',
                 'faq.q4': 'ما طرق الدفع المقبولة؟',
-                'faq.a4': 'الدفع يتم <strong class="text-slate-300">عند التسليم</strong>. نقبل النقد (<strong class="text-slate-300">cash</strong>) والبطاقة عبر <strong class="text-slate-300">جهاز الدفع المحمول</strong>. لا يلزم دفع مسبق عبر الإنترنت.',
+                'faq.a4': 'الدفع يتم <strong class="text-slate-300">عند التسليم</strong>. نقبل النقد (<strong class="text-slate-300">نقداً</strong>) والبطاقة عبر <strong class="text-slate-300">جهاز الدفع المحمول</strong>. لا يلزم دفع مسبق عبر الإنترنت.',
                 'features.eyebrow': 'خدماتنا',
                 'features.title': 'لماذا L.THREE RENTCAR؟',
                 'features.desc': 'تجربة فاخرة، مصممة للمغرب',
@@ -1666,6 +1720,27 @@
                 'hours.time_saturday': '09:00 - 18:00',
                 'hours.time_sunday': '09:00 - 12:00',
                 'hours.support_note': 'مساعدة واتساب 24/7',
+                'aria.language': 'اللغة',
+                'aria.menu': 'القائمة',
+                'aria.rating_summary': 'تقييم 5.0 من 5',
+                'aria.rating_stars': '5 نجوم من 5',
+                'aria.google_maps': 'Google Maps',
+                'aria.whatsapp': 'واتساب',
+                'aria.instagram': 'إنستغرام',
+                'aria.facebook': 'فيسبوك',
+                'aria.logo': 'L.THREE RENTCAR',
+                'wa.prefill_rent': 'مرحباً، أود استئجار سيارة في فاس.',
+                'wa.prefill_fleet': 'مرحباً، أود الاطلاع على أسطولكم المتاح بالكامل.',
+                'wa.msg.greeting': 'مرحباً 👋',
+                'wa.msg.intro_car': 'أود حجز السيارة التالية:',
+                'wa.msg.intro_booking': 'أود حجز سيارة:',
+                'wa.msg.car': '🚗 السيارة: {name}',
+                'wa.msg.location': '📍 مكان الاستلام: {location}',
+                'wa.msg.start_date': '📅 تاريخ البداية: {date}',
+                'wa.msg.end_date': '📅 تاريخ الإرجاع: {date}',
+                'wa.msg.duration': '🗓️ المدة: {days} يوم',
+                'wa.msg.confirm': 'يرجى تأكيد التوفر والسعر الإجمالي.',
+                'wa.msg.signoff': 'مع التحية.',
                 'alert.date_invalid': 'يجب أن يكون تاريخ النهاية بعد تاريخ البداية.'
             }
         };
@@ -1698,6 +1773,15 @@
             });
             document.querySelectorAll('option[data-i18n]').forEach(function (opt) {
                 opt.textContent = t(opt.dataset.i18n);
+            });
+            document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+                el.setAttribute('aria-label', t(el.dataset.i18nAria));
+            });
+            document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+                el.setAttribute('alt', t(el.dataset.i18nAlt));
+            });
+            document.querySelectorAll('[data-wa-prefill]').forEach(function (el) {
+                el.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(t(el.dataset.waPrefill));
             });
 
             document.querySelectorAll('.lang-btn').forEach(function (btn) {
@@ -1813,13 +1897,14 @@
             if (dateFin.value && dateFin.value < dateDebut.value) dateFin.value = dateDebut.value;
         });
 
-        function formatDateFr(d) {
-            return new Date(d + 'T00:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+        function formatDateLocalized(d) {
+            const locales = { fr: 'fr-FR', en: 'en-GB', ar: 'ar-MA' };
+            return new Date(d + 'T00:00:00').toLocaleDateString(locales[currentLang] || 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
         }
 
-        function getPickupLocationFr(lieuKey) {
+        function getPickupLocation(lieuKey) {
             if (!lieuKey) return '';
-            return translations.fr['opt.' + lieuKey] || '';
+            return t('opt.' + lieuKey);
         }
 
         function getRentalDays(debut, fin) {
@@ -1840,23 +1925,23 @@
             const lines = [
                 '---',
                 '',
-                'Bonjour 👋',
+                t('wa.msg.greeting'),
                 '',
-                'Je souhaite réserver le véhicule suivant :',
+                carName ? t('wa.msg.intro_car') : t('wa.msg.intro_booking'),
                 ''
             ];
 
-            if (carName) lines.push('🚗 Véhicule : ' + carName);
-            if (pickupLocation) lines.push('📍 Lieu de prise en charge : ' + pickupLocation);
-            if (startDate) lines.push('📅 Date de début : ' + formatDateFr(startDate));
-            if (endDate) lines.push('📅 Date de retour : ' + formatDateFr(endDate));
-            if (days !== null) lines.push('🗓️ Durée : ' + days + ' jour(s)');
+            if (carName) lines.push(t('wa.msg.car').replace('{name}', carName));
+            if (pickupLocation) lines.push(t('wa.msg.location').replace('{location}', pickupLocation));
+            if (startDate) lines.push(t('wa.msg.start_date').replace('{date}', formatDateLocalized(startDate)));
+            if (endDate) lines.push(t('wa.msg.end_date').replace('{date}', formatDateLocalized(endDate)));
+            if (days !== null) lines.push(t('wa.msg.duration').replace('{days}', days));
 
             lines.push(
                 '',
-                'Merci de me confirmer la disponibilité ainsi que le prix total.',
+                t('wa.msg.confirm'),
                 '',
-                'Cordialement.',
+                t('wa.msg.signoff'),
                 '',
                 '---'
             );
@@ -1881,8 +1966,8 @@
                 }
 
                 openWhatsAppReservation({
-                    carName: btn.dataset.carName || '',
-                    pickupLocation: getPickupLocationFr(lieuKey),
+                    carName: btn.dataset.carKey ? t(btn.dataset.carKey) : '',
+                    pickupLocation: getPickupLocation(lieuKey),
                     startDate: debut,
                     endDate: fin
                 });
@@ -1902,7 +1987,7 @@
 
             openWhatsAppReservation({
                 carName: '',
-                pickupLocation: getPickupLocationFr(lieuKey),
+                pickupLocation: getPickupLocation(lieuKey),
                 startDate: debut,
                 endDate: fin
             });
