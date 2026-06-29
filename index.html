@@ -1033,6 +1033,30 @@
             .google-maps-badge {
                 min-width: 0;
             }
+
+            /* Collapse double section padding before CTA */
+            #features {
+                padding-bottom: 2.5rem;
+            }
+
+            #contact {
+                padding-top: 2.5rem;
+            }
+
+            /* WhatsApp float — safe margins, never over content */
+            body {
+                padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+            }
+
+            .wa-float {
+                bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+                right: calc(1rem + env(safe-area-inset-right, 0px));
+            }
+
+            [dir="rtl"] .wa-float {
+                right: auto;
+                left: calc(1rem + env(safe-area-inset-left, 0px));
+            }
         }
 
         @media (max-width: 360px) {
