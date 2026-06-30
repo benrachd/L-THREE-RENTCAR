@@ -162,7 +162,7 @@
             overflow: hidden;
             isolation: isolate;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .hero-premium {
                 flex-direction: column;
                 justify-content: space-between;
@@ -909,8 +909,8 @@
         }
         .footer-nav-link:hover { color: #f59e0b; }
 
-        /* Mobile-only responsive — desktop/tablet 769px+ unchanged */
-        @media (max-width: 768px) {
+        /* Mobile-only responsive — desktop/tablet 768px+ unchanged */
+        @media (max-width: 767px) {
             html,
             body {
                 overflow-x: hidden;
@@ -955,49 +955,20 @@
                 display: flex !important;
             }
 
-            /* Hero title + stats */
-            .hero-premium__content > div,
-            .hero-premium__content > div > div,
+            /* Hero — balanced height, equal side margins from max-md:px-4 */
+            .hero-premium__content > div {
+                min-width: 0;
+            }
+
             .hero-premium__content .text-center {
                 min-width: 0;
-                max-width: 100%;
-                box-sizing: border-box;
             }
 
             #booking h1 {
-                overflow-wrap: break-word;
-                word-break: break-word;
-                max-width: 100%;
+                overflow-wrap: anywhere;
             }
 
-            .hero-premium__content .text-center > div.flex {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 0.75rem 1rem;
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .hero-premium__content .text-center > div.flex > div {
-                flex: 0 1 auto;
-                min-width: 0;
-                max-width: 33.333%;
-            }
-
-            .hero-premium__content .text-center > div.flex > div p {
-                overflow-wrap: break-word;
-            }
-
-            #booking .hero-premium__content > div {
-                width: 100%;
-                max-width: 100%;
-                min-width: 0;
-                overflow-x: clip;
-            }
-
-            /* Booking form — full width */
+            /* Booking card — fully visible, consistent width and spacing */
             #booking .booking-widget {
                 width: 100%;
                 max-width: 100%;
@@ -1008,7 +979,10 @@
                 box-sizing: border-box;
             }
 
-            #booking-form,
+            #booking-form {
+                width: 100%;
+            }
+
             #booking-form > div {
                 width: 100%;
                 min-width: 0;
@@ -1016,6 +990,7 @@
 
             #booking-form .grid {
                 display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 0.5rem;
                 width: 100%;
                 min-width: 0;
@@ -1025,13 +1000,14 @@
                 min-width: 0;
             }
 
-            .booking-field,
-            .booking-field select,
-            .booking-field input {
+            .booking-field {
                 width: 100%;
                 min-width: 0;
-                max-width: 100%;
-                box-sizing: border-box;
+            }
+
+            .booking-field select,
+            .booking-field input {
+                min-width: 0;
             }
 
             .booking-field input[type="date"] {
@@ -1040,8 +1016,6 @@
 
             .booking-submit {
                 width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
             }
 
             /* Cards — consistent box model */
@@ -1166,9 +1140,9 @@
             }
         }
 
-        @media (max-width: 390px) {
+        @media (max-width: 360px) {
             #booking-form .grid {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1294,7 +1268,7 @@
                                 <svg class="booking-field-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 max-[390px]:grid-cols-1 gap-4 max-md:gap-2">
+                        <div class="grid grid-cols-2 gap-4 max-md:gap-2">
                             <div>
                                 <label for="date-debut" class="booking-field-label" data-i18n="form.date_start">Date de début</label>
                                 <div class="booking-field">
