@@ -1668,11 +1668,10 @@
                 'fleet.economy': 'Économique',
                 'fleet.suv': 'SUV Luxury',
                 'fleet.price_unit': 'DH / jour',
-                'fleet.spec_clio5': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_sandero': '⛽ TODO • ⚙️ Automatique • 👤 TODO',
-                'fleet.spec_sandero2': '⛽ TODO • ⚙️ Automatique • 👤 TODO',
-                'fleet.spec_peugeot208': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_skoda': '⛽ TODO • ⚙️ TODO • 👤 TODO',
+                'fleet.price_on_request': 'Sur demande',
+                'fleet.spec_on_request': 'Informations sur demande',
+                'fleet.spec_sandero': '⚙️ Automatique',
+                'fleet.spec_sandero2': '⚙️ Automatique',
                 'fleet.book': 'Réserver',
                 'fleet.car_clio5': 'Renault Clio 5',
                 'fleet.car_sandero': 'Dacia Sandero Stepway Automatique',
@@ -1812,11 +1811,10 @@
                 'fleet.economy': 'Economy',
                 'fleet.suv': 'SUV Luxury',
                 'fleet.price_unit': 'DH / day',
-                'fleet.spec_clio5': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_sandero': '⛽ TODO • ⚙️ Automatic • 👤 TODO',
-                'fleet.spec_sandero2': '⛽ TODO • ⚙️ Automatic • 👤 TODO',
-                'fleet.spec_peugeot208': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_skoda': '⛽ TODO • ⚙️ TODO • 👤 TODO',
+                'fleet.price_on_request': 'On request',
+                'fleet.spec_on_request': 'Information on request',
+                'fleet.spec_sandero': '⚙️ Automatic',
+                'fleet.spec_sandero2': '⚙️ Automatic',
                 'fleet.book': 'Book now',
                 'fleet.car_clio5': 'Renault Clio 5',
                 'fleet.car_sandero': 'Dacia Sandero Stepway Automatique',
@@ -1956,11 +1954,10 @@
                 'fleet.economy': 'اقتصادية',
                 'fleet.suv': 'SUV فاخرة',
                 'fleet.price_unit': 'درهم / يوم',
-                'fleet.spec_clio5': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_sandero': '⛽ TODO • ⚙️ أوتوماتيك • 👤 TODO',
-                'fleet.spec_sandero2': '⛽ TODO • ⚙️ أوتوماتيك • 👤 TODO',
-                'fleet.spec_peugeot208': '⛽ TODO • ⚙️ TODO • 👤 TODO',
-                'fleet.spec_skoda': '⛽ TODO • ⚙️ TODO • 👤 TODO',
+                'fleet.price_on_request': 'حسب الطلب',
+                'fleet.spec_on_request': 'المعلومات متوفرة عند الطلب',
+                'fleet.spec_sandero': '⚙️ أوتوماتيك',
+                'fleet.spec_sandero2': '⚙️ أوتوماتيك',
                 'fleet.book': 'احجز',
                 'fleet.car_clio5': 'Renault Clio 5',
                 'fleet.car_sandero': 'Dacia Sandero Stepway Automatique',
@@ -2061,10 +2058,9 @@
         const FLEET = [
             {
                 carKey: 'fleet.car_clio5',
-                specKey: 'fleet.spec_clio5',
+                specKey: 'fleet.spec_on_request',
                 altKey: 'meta.alt.clio5',
                 image: 'public/images/clio-5.jpg',
-                price: 'TODO',
                 badgeKey: 'fleet.popular',
                 badgeClass: 'text-sky-400 bg-sky-400/10',
                 colSpan: ''
@@ -2074,7 +2070,6 @@
                 specKey: 'fleet.spec_sandero',
                 altKey: 'meta.alt.sandero',
                 image: 'public/images/dacia-streetway-automatique.jpg',
-                price: 'TODO',
                 badgeKey: 'fleet.economy',
                 badgeClass: 'text-emerald-400 bg-emerald-400/10',
                 colSpan: ''
@@ -2084,27 +2079,24 @@
                 specKey: 'fleet.spec_sandero2',
                 altKey: 'meta.alt.sandero2',
                 image: 'public/images/dacia-streetway-automatique-2.jpg',
-                price: 'TODO',
                 badgeKey: 'fleet.economy',
                 badgeClass: 'text-emerald-400 bg-emerald-400/10',
                 colSpan: ''
             },
             {
                 carKey: 'fleet.car_peugeot208',
-                specKey: 'fleet.spec_peugeot208',
+                specKey: 'fleet.spec_on_request',
                 altKey: 'meta.alt.peugeot208',
                 image: 'public/images/peugeot-208-style.jpg',
-                price: 'TODO',
                 badgeKey: 'fleet.popular',
                 badgeClass: 'text-sky-400 bg-sky-400/10',
                 colSpan: ''
             },
             {
                 carKey: 'fleet.car_skoda',
-                specKey: 'fleet.spec_skoda',
+                specKey: 'fleet.spec_on_request',
                 altKey: 'meta.alt.skoda',
                 image: 'public/images/skoda-karoq.jpg',
-                price: 'TODO',
                 badgeKey: 'fleet.suv',
                 badgeClass: 'text-amber-500 bg-amber-500/10',
                 colSpan: 'md:col-span-2 lg:col-span-1'
@@ -2131,8 +2123,7 @@
                                     '<h3 class="text-xl font-bold mt-3" data-i18n="' + car.carKey + '"></h3>' +
                                 '</div>' +
                                 '<div class="text-right shrink-0">' +
-                                    '<p class="text-2xl font-black text-amber-500">' + car.price + '</p>' +
-                                    '<p class="text-slate-500 text-xs" data-i18n="fleet.price_unit"></p>' +
+                                    '<p class="text-2xl font-black text-amber-500" data-i18n="fleet.price_on_request"></p>' +
                                 '</div>' +
                             '</div>' +
                             '<p class="text-slate-400 text-xs mt-5 pt-5 border-t border-slate-800/80 text-center leading-relaxed" data-i18n="' + car.specKey + '"></p>' +
