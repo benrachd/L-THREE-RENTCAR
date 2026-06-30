@@ -1141,20 +1141,30 @@
                 padding-top: 2.5rem;
             }
 
-            /* Floating WhatsApp — safe clearance */
+            /* Floating WhatsApp — bottom-right, hidden until past hero */
             body {
                 padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
             }
 
             .wa-float {
-                top: calc(4.75rem + env(safe-area-inset-top, 0px)) !important;
-                bottom: auto !important;
-                right: calc(1rem + env(safe-area-inset-right, 0px)) !important;
+                top: auto !important;
+                bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+                right: calc(20px + env(safe-area-inset-right, 0px)) !important;
                 left: auto !important;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: opacity 0.25s ease, visibility 0.25s ease;
+            }
+
+            .wa-float.wa-float--visible {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
             }
 
             [dir="rtl"] .wa-float {
-                left: calc(1rem + env(safe-area-inset-left, 0px)) !important;
+                left: calc(20px + env(safe-area-inset-left, 0px)) !important;
                 right: auto !important;
             }
         }
@@ -2487,6 +2497,39 @@
                 endDate: fin
             });
         });
+
+        (function initMobileWaFloat() {
+            var floatBtn = document.querySelector('.wa-float');
+            var hero = document.getElementById('booking');
+            var contactBtn = document.querySelector('#contact .wa-btn');
+            if (!floatBtn || !hero) return;
+
+            var mobileMq = window.matchMedia('(max-width: 768px)');
+
+            function overlapsFloatZone(rect) {
+                var zoneTop = window.innerHeight - 100;
+                return rect.bottom > zoneTop && rect.top < window.innerHeight;
+            }
+
+            function updateWaFloat() {
+                if (!mobileMq.matches) {
+                    floatBtn.classList.remove('wa-float--visible');
+                    return;
+                }
+                var pastHero = hero.getBoundingClientRect().bottom <= 0;
+                var blocked = contactBtn && overlapsFloatZone(contactBtn.getBoundingClientRect());
+                floatBtn.classList.toggle('wa-float--visible', pastHero && !blocked);
+            }
+
+            updateWaFloat();
+            window.addEventListener('scroll', updateWaFloat, { passive: true });
+            window.addEventListener('resize', updateWaFloat);
+            if (typeof mobileMq.addEventListener === 'function') {
+                mobileMq.addEventListener('change', updateWaFloat);
+            } else if (typeof mobileMq.addListener === 'function') {
+                mobileMq.addListener(updateWaFloat);
+            }
+        })();
     </script>
     <style>
         /* Mobile date grid — overrides Tailwind utilities after runtime injection */
